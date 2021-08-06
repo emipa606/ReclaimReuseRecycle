@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(SolutionDir)\RimworldInstall.props" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AC8C55D-C840-4ADF-BE16-2F5EF3F3A601}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoctorVanGogh.ReclaimReuseRecycle</RootNamespace>
+    <AssemblyName>ReclaimReuseRecycle</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\v1.1\Assemblies\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\v1.1\Assemblies\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- this block is *not* needed for devenv builds - *BUT* if we ever switch to an msbuild based system this allows T4 access to project variables -->
+    <T4ParameterValues Include="RimworldManagedDir11">
+      <Value>$(RimworldManagedDir11)</Value>
+    </T4ParameterValues>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimworldManagedDir11)\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine">
+      <HintPath>$(RimworldManagedDir11)\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(RimworldManagedDir11)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(RimworldManagedDir11)\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(RimworldManagedDir11)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Building_R3WorkTable.cs" />
+    <Compile Include="Patches\Corpse_SpecialDisplayStats.cs" />
+    <Compile Include="Patches\Debug.cs" />
+    <Compile Include="Patches\DefGenerator_GenerateImpliedDefs_PostResolve.cs" />
+    <Compile Include="Patches\DefGenerator_GenerateImpliedDefs_PreResolve.cs" />
+    <Compile Include="Patches\InjuryDebug.cs" />
+    <Compile Include="R3Mod.Settings.cs" />
+    <Compile Include="[Generated]\R3DefOf.cs" />
+    <Compile Include="[Model]\Complexity.cs" />
+    <Compile Include="[Model]\ReclamationType.cs" />
+    <Compile Include="[Model]\StatPart_Reclaimed.cs" />
+    <Compile Include="[Model]\ThingDefGenerator_Reclaimed.cs" />
+    <Compile Include="Util\HarvestUtility.cs" />
+    <Compile Include="[Model]\RecipeWorker.cs" />
+    <Compile Include="[Model]\PackedThing.cs" />
+    <Compile Include="R3Mod.cs" />
+    <Compile Include="Patches\GenRecipe_MakeRecipeProducts.cs" />
+    <Compile Include="Util\HeDiffComparer_AddedPartsAndImplantsFirst.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="[Generated]\LanguageKeys.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LanguageKeys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="[SpecialFilters]\Filters.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="[Generated]\LanguageKeys.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LanguageKeys.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.0.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="MSBuildTasks">
+      <Version>1.5.0.235</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets. -->
+  <Target Name="BeforeBuild">
+    <PropertyGroup>
+      <versionFile>$(ProjectDir)\Properties\version.txt</versionFile>
+    </PropertyGroup>
+    <Version VersionFile="$(versionFile)" RevisionType="Increment" StartDate="2017/07/19" Major="0" Minor="9" Build="0" />
+    <ReadLinesFromFile File="$(versionFile)">
+      <Output TaskParameter="Lines" ItemName="combinedVersion" />
+    </ReadLinesFromFile>
+    <AssemblyInfo OutputFile="$(ProjectDir)\Properties\AssemblyInfo.cs" CodeLanguage="CS" AssemblyTitle="ReclaimReuseRecycle" AssemblyCopyright="Copyright © DoctorVanGogh 2017" ComVisible="false" Guid="1ac8c55d-c840-4adf-be16-2f5ef3f3a601" AssemblyVersion="@(combinedVersion)" />
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>DEL "$(OutDir)\0Harmony.dll"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

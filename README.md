@@ -1,67 +1,81 @@
-# Reclaim, Reuse, Recycle
+# ReclaimReuseRecycle
+
+![Image](https://i.imgur.com/WAEzk68.png)
 
-[![RimWorld 1.0](https://img.shields.io/badge/RimWorld-1.0-green.svg?style=popout-square)](http://rimworldgame.com/) 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=popout-square)](https://creativecommons.org/licenses/by-nc-sa/4.0/) ![Github Total Downloads](https://img.shields.io/github/downloads-pre/doctorvangogh/ReclaimReuseRecycle/total.svg?style=popout-square)  [![GitHub Latest Release Version](https://img.shields.io/github/release/doctorvangogh/ReclaimReuseRecycle.svg?style=popout-square)](../../releases/latest) [![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/doctorvangogh/ReclaimReuseRecycle/all.svg?style=popout-square)](../../releases)
+Update of DoctorVanGoghs mod
+https://steamcommunity.com/sharedfiles/filedetails/?id=1120445716
 
-![Logo](https://raw.githubusercontent.com/DoctorVanGogh/ReclaimReuseRecycle/master/Textures/UI/Recycle.png)
+![Image](https://i.imgur.com/7Gzt3Rg.png)
 
-Rimworld mod that allows extracting added parts & implants from corpses.
+	
+![Image](https://i.imgur.com/NOW7jU1.png)
 
-This mods basically adds two types of jobs/recipes:
+# Harvest implants &amp; bionics from corpses and prepare them for reuse by your colonists
 
-- A set of "Harvest corpse" jobs at the Butcher & Machining Tables which will try to extract all recoverable artificial body parts.
-- A set of "refurbish" type jobs on the Drug Lab which will transform extracted parts into fully reusable body parts again.
 
-Also included are research projects (un)locking the harvesting & refurbishment type jobs.
+This mods adds a new &quot;Harvesting bench&quot; with a new job: Harvesting corpses for [u]artificial[/u] parts. Those parts can then be refurbished to allow reuse (or sale) by your colonists at a &quot;refurbushment bench&quot;.
 
-## Basic concepts
+Parts are separated into &apos;complexity&apos; tiers and **all** mod added parts are supported.
 
-### Extracted part status
+# Research integration
 
-Reclaimed parts (which can be any added part or implant that _could_ be removed from a corresponding live pawn) are either extracted in a _non-sterile_ or _mangled variant_. Undamaged (or slightly damaged) parts are extracted as _non-sterile_, while moderately damaged parts get extracted as _mangled_ versions. The thresholds for non-sterile/mangled/no extraction can be changed in the mod options. (Defaults are 100%-85%: non-sterile, 85%-50%: mangled, otherwise: non reclaimable).
-Non-sterile parts only need the part and medicine to be usable again, while mangled parts need additional material(s) for restoration.
+Part harvesting &amp; refurbuishment is gated by tiered research projects.
 
-### Extracted part 'Complexity'
 
-Parts are categorized by Complexity (a visible stat on the reclaimed part). Available levels are
+# Harvested parts
 
-- Primitive
-- Advanced
-- Glittertech
+Parts are either reclaimed as &apos;Non-Sterile&apos; or &apos;Mangled&apos; (or not at all) depending on their damage state. The thresholds for the different types of reclamation can be changed in the mod settings.
 
-This complexity is derived from the extracted part by internal tags, techlevel or ultimately price and should account for all mod-added parts.
-Each complexity level corresponds to the medicine (and possibly other materials) needed to make the part usable again. _Primitive_ needs Herbal Medicine (plus wood/cloth), _Advanced_ uses regular Medicine (plus steel/components) and _Glittertech_ requires Glitterworld Medicine (plus components & plasteel).
+&apos;Non-Sterile&apos; parts simply need some medicine to wipe them down and to be reusable again.
+&apos;Mangled&apos; parts need some basic materials on top of that before they can be reused.
 
-### Harvesting Jobs
+*I&apos;ve decided against simply &apos;vomiting&apos; out the final usable bionics directly in the harvesting job, since that makes bionic aquisition **way** too easy. But now with this mod you have the option to reclaim those parts you want - or if you feel like making a recycling industry out of your raiders, you can do that - it&apos;s just a bit more involved than &apos;Click, get bionics&apos;* . 
 
-Extraction is a composite job that will always try to remove _all_ possible parts in a corpse.
-The extraction _can fail_ and that failure is calculated _per part_. Failures work similar to surgery and are in fact calculated from the _surgery/mechanoid extraction success chance_ of the executing pawn. Success chance is multiplied by 1.5 compared to regular surgeries to accomodate for the composite nature of the harvesting job as well as the lack of 'supporting' medicine (Room stats still apply for biological harvests).
-A minor failure will typically still allow extraction of a (mostly) undamaged part, while catastrophic failure will almost certainly destroy the part.
+Also: Harvesting parts can fail in the same way as medical operations can. So better get your good doctor/engineer to carve up those corpses, or you might loose more than you gain. (Success is mapped to the &apos;medical operation&apos;/&apos;mechanoid disassembly&apos; chance you can see in your colonists info).
 
-## Changes to vanilla behavior
+# Part &apos;Complexity&apos; 
 
-This mods adds two special ThingFilters to the animal, humanlike & mechanoid corpse categories: _Harvested_ & _Unharvested_ corpses.
-_Harvested_ corpses contain no reclaimable parts, while _Unharvested_ corpses ultimately could have (some) parts removed.
-The vanilla _Butcher corpse_ job get's changed to only use _Harvested_ corpses by default. If you want to make it use any corpse, make sure to activate
-_Unharvested_ corpses too (but why would you?).
+This mod separates reclaimable parts into three &apos;complexity&apos; tiers: primitive, advanced &amp; glittertech.
+Those tiers *mostly* correspond to tech levels Animal-Medieval, Industrial-Spacer &amp; Ultra and above but also take some other stats like price into account. The effect of this should be that *all* parts from *any* mod should be supported with this mod.
 
-## Compatibility
+# Changes to vanilla gameplay
 
-Mod load order should not matter for this mod. It also should support _any and all_ additional parts from 3rd party mods.
-While the complexity might not be 100% as expected for 'weird' extra parts it will always guess _something_ and thus allow reclamation & reuse of the part(s).
+This mod adds some special filters to the &apos;corpses&apos; category of stockpile and recipe ingredients which correspond to corpses without any parts, or with parts of a certain complexity.
+The vanilla &apos;butcher corpse&apos; recipe default get&apos;s modified to only use corpses without any parts. You can manually enable the use of corpses with parts if you so like.
 
-## Bugs & issues
+# (Un-)Installation
 
-Please report any errors or issues on the [github issue tracker](https://github.com/DoctorVanGogh/ReclaimReuseRecycle/issues).
+To install simply subscribe to this mod. Load order does not matter.
 
----
+To Uninstall just make sure you have no reclaimed parts and no harvesting/refurbishment jobs active. You can then simply deactivate the mod. There will be a bunch of red error messages after load, but the save should load and run fine. Those errors will be gone on subsequent loads.
 
-Polished textures by *Syrchalis*
 
-## Powered by ![Harmony](https://github.com/pardeike/Harmony)
+*Uninstalled 3rd party mods:*
+If you hve a reclaimed part in your colony and you uninstall the mod that introduces the base part for that you will get an error on load. You should dispose of any reclaimed parts coresponding to a 3rd party mod before you remove that mod.
 
-<p align="center">
-<img alt="Powered by Harmony" src="https://camo.githubusercontent.com/074bf079275fa90809f51b74e9dd0deccc70328f/68747470733a2f2f7332342e706f7374696d672e6f72672f3538626c31727a33392f6c6f676f2e706e67" />
-</p>
+# Ludeon forum thread
 
-Harmony is lisenced under a [MIT license](https://raw.githubusercontent.com/pardeike/Harmony/master/LICENSE).
+A non steam version is available at https://ludeon.com/forums/index.php?topic=35322.0
+
+### Like my Mods?
+
+https://ko-fi.com/DoctorVanGogh]![Image](https://raw.githubusercontent.com/DoctorVanGogh/Shared/master/Sponsoring/Ko-Fi/buymeacoffee-28.png)
+
+
+### Looking for an older version?
+
+Get it from https://github.com/DoctorVanGogh/ReclaimReuseRecycle/releases]github
+
+![Image](https://i.imgur.com/Rs6T6cr.png)
+
+
+
+-  See if the the error persists if you just have this mod and its requirements active.
+-  If not, try adding your other mods until it happens again.
+-  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib and command Ctrl+F12
+-  For best support, please use the Discord-channel for error-reporting.
+-  Do not report errors by making a discussion-thread, I get no notification of that.
+-  If you have the solution for a problem, please post it to the GitHub repository.
+
+
+

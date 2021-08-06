@@ -1,5 +1,7 @@
-﻿namespace DoctorVanGogh.ReclaimReuseRecycle {
-    public enum Complexity {
+﻿namespace DoctorVanGogh.ReclaimReuseRecycle
+{
+    public enum Complexity
+    {
         Primitive,
         Advanced,
         Glittertech

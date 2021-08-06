@@ -1,74 +1,86 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Emit;
 using HarmonyLib;
-using UnityEngine;
 using Verse;
 
-namespace DoctorVanGogh.ReclaimReuseRecycle {
-
+namespace DoctorVanGogh.ReclaimReuseRecycle
+{
     [HarmonyPatch(typeof(GenRecipe), nameof(GenRecipe.MakeRecipeProducts))]
-    public class GenRecipe_MakeRecipeProducts {
+    public class GenRecipe_MakeRecipeProducts
+    {
+        private static readonly Thing[] Empty = new Thing[0];
 
-        private static Thing[] Empty = new Thing[0];
+        private static readonly RecipeDef[] ReclamationRecipes =
+        {
+            R3DefOf.R3_Refurbish_Primitive,
+            R3DefOf.R3_Refurbish_Advanced,
+            R3DefOf.R3_Refurbish_Glittertech,
+            R3DefOf.R3_Sterilize_Primitive,
+            R3DefOf.R3_Sterilize_Advanced,
+            R3DefOf.R3_Sterilize_Glittertech
+        };
 
-        private static RecipeDef[] ReclamationRecipes = new[] {
-                                                            R3DefOf.R3_Refurbish_Primitive,
-                                                            R3DefOf.R3_Refurbish_Advanced,
-                                                            R3DefOf.R3_Refurbish_Glittertech,
-                                                            R3DefOf.R3_Sterilize_Primitive,
-                                                            R3DefOf.R3_Sterilize_Advanced,
-                                                            R3DefOf.R3_Sterilize_Glittertech
-                                                        };
+        public static void Postfix(ref IEnumerable<Thing> __result, RecipeDef recipeDef, Pawn worker,
+            List<Thing> ingredients, Thing dominantIngredient)
+        {
+            if (RecipeWorker_Harvest.HarvestFleshRecipes.Contains(recipeDef))
+            {
+                var result = new List<Thing>(__result ?? Empty);
 
-        public static void Postfix(ref IEnumerable<Thing> __result, RecipeDef recipeDef, Pawn worker, List<Thing> ingredients, Thing dominantIngredient) {
-            if (RecipeWorker_Harvest.HarvestFleshRecipes.Contains(recipeDef)) {
-                List<Thing> result = new List<Thing>(__result ?? Empty);
-
-                var corpse = dominantIngredient as Corpse;
-
-                if (corpse == null) {
+                if (!(dominantIngredient is Corpse corpse))
+                {
                     Log.Warning("Harvesting without a corpse???");
                     return;
                 }
 
-                RaceProperties race = corpse.InnerPawn.RaceProps;
-                Pawn_HealthTracker healthTracker = corpse.InnerPawn.health;
-                HediffSet diffSet = healthTracker.hediffSet;
+                var race = corpse.InnerPawn.RaceProps;
+                var healthTracker = corpse.InnerPawn.health;
+                var diffSet = healthTracker.hediffSet;
 
-                foreach (Hediff hediff in diffSet.hediffs.Where(d => d is Hediff_Implant || d is Hediff_AddedPart).Where(d => d.def.spawnThingOnRemoved != null).ToArray()) {
-                    Thing thing = HarvestUtility.TryExtractPart(worker, corpse, race, diffSet, hediff.Label, hediff.Part, hediff.def.spawnThingOnRemoved);
+                foreach (var hediff in diffSet.hediffs.Where(d => d is Hediff_Implant)
+                    .Where(d => d.def.spawnThingOnRemoved != null).ToArray())
+                {
+                    var thing = HarvestUtility.TryExtractPart(worker, corpse, race, diffSet, hediff.Label, hediff.Part,
+                        hediff.def.spawnThingOnRemoved);
                     if (thing != null)
+                    {
                         result.Add(thing);
+                    }
                 }
 
                 __result = result;
-            } else if (RecipeWorker_Harvest.HarvestMechanoidRecipes.Contains(recipeDef)) {
-                List<Thing> result = new List<Thing>(__result ?? Empty);
+            }
+            else if (RecipeWorker_Harvest.HarvestMechanoidRecipes.Contains(recipeDef))
+            {
+                var result = new List<Thing>(__result ?? Empty);
 
-                var corpse = dominantIngredient as Corpse;
-
-                if (corpse == null) {
+                if (!(dominantIngredient is Corpse corpse))
+                {
                     Log.Warning("Harvesting without a corpse???");
                     return;
                 }
 
-                RaceProperties race = corpse.InnerPawn.RaceProps;
-                Pawn_HealthTracker healthTracker = corpse.InnerPawn.health;
-                HediffSet diffSet = healthTracker.hediffSet;
+                var race = corpse.InnerPawn.RaceProps;
+                var healthTracker = corpse.InnerPawn.health;
+                var diffSet = healthTracker.hediffSet;
 
-                foreach (BodyPartRecord bpr in diffSet.GetNotMissingParts().Where(bpr => bpr.def.spawnThingOnRemoved != null)) {
-                    Thing thing = HarvestUtility.TryExtractPart(worker, corpse, race, diffSet, bpr.def.LabelCap, bpr, bpr.def.spawnThingOnRemoved);
+                foreach (var bpr in diffSet.GetNotMissingParts().Where(bpr => bpr.def.spawnThingOnRemoved != null))
+                {
+                    var thing = HarvestUtility.TryExtractPart(worker, corpse, race, diffSet, bpr.def.LabelCap, bpr,
+                        bpr.def.spawnThingOnRemoved);
                     if (thing != null)
+                    {
                         result.Add(thing);
+                    }
                 }
 
                 __result = result;
-            } else if (ReclamationRecipes.Contains(recipeDef)) {
-                List<Thing> result = new List<Thing>(__result ?? Empty);
+            }
+            else if (ReclamationRecipes.Contains(recipeDef))
+            {
+                var result = new List<Thing>(__result ?? Empty);
 
-                PackedThing reclaimedThing = ingredients.OfType<PackedThing>().First();
+                var reclaimedThing = ingredients.OfType<PackedThing>().First();
 
                 result.Add(ThingMaker.MakeThing(reclaimedThing.SpawnOnUnpack));
 

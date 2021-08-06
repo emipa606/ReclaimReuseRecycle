@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HarmonyLib;
-using Verse;
-
-namespace DoctorVanGogh.ReclaimReuseRecycle.Patches
+﻿namespace DoctorVanGogh.ReclaimReuseRecycle.Patches
 {
     /*
     [HarmonyPatch(typeof(ThingMaker), nameof(ThingMaker.MakeThing))]

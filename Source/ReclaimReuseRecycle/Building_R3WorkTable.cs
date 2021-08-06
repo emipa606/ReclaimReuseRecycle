@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using RimWorld;
-using Verse;
 
-namespace DoctorVanGogh.ReclaimReuseRecycle {
-    class Building_R3WorkTable : Building_WorkTable {
-        public override IEnumerable<StatDrawEntry> SpecialDisplayStats() {            
-            foreach (var displayStat in base.SpecialDisplayStats()) {
+namespace DoctorVanGogh.ReclaimReuseRecycle
+{
+    internal class Building_R3WorkTable : Building_WorkTable
+    {
+        public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
+        {
+            foreach (var displayStat in base.SpecialDisplayStats())
+            {
                 yield return displayStat;
             }
 
@@ -17,6 +17,5 @@ namespace DoctorVanGogh.ReclaimReuseRecycle {
             // TODO: mechanoids
             //yield return new StatDrawEntry(StatCategoryDefOf.Building, StatDefOf.MedicalSurgerySuccessChance);
         }
-
     }
 }
