@@ -1,4 +1,7 @@
 # Changelog for ReclaimReuseRecycle
 
+1.3.1 - Moved the harvest corpse work to cremation when FSF Complex Jobs is loaded
+
+
 1.0.1.0 - Updated to 1.2 and 1.3
 

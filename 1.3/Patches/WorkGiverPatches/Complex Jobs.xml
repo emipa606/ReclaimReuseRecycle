@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/WorkTypeDef[defName="FSFCremating"]</xpath>
+    <success>Always</success>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/WorkGiverDef[defName = "R3_DoWorkHarvestCorpse"]/workType</xpath>
+      <value>
+        <workType>FSFCremating</workType>
+      </value>
+    </match>
+  </Operation>
+</Patch>

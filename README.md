@@ -1,21 +1,21 @@
 # ReclaimReuseRecycle
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of DoctorVanGoghs mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1120445716
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 # Harvest implants &amp; bionics from corpses and prepare them for reuse by your colonists
 
 
-This mods adds a new &quot;Harvesting bench&quot; with a new job: Harvesting corpses for [u]artificial[/u] parts. Those parts can then be refurbished to allow reuse (or sale) by your colonists at a &quot;refurbushment bench&quot;.
+This mods adds a new "Harvesting bench" with a new job: Harvesting corpses for [u]artificial[/u] parts. Those parts can then be refurbished to allow reuse (or sale) by your colonists at a "refurbushment bench".
 
-Parts are separated into &apos;complexity&apos; tiers and **all** mod added parts are supported.
+Parts are separated into 'complexity' tiers and **all** mod added parts are supported.
 
 # Research integration
 
@@ -24,24 +24,24 @@ Part harvesting &amp; refurbuishment is gated by tiered research projects.
 
 # Harvested parts
 
-Parts are either reclaimed as &apos;Non-Sterile&apos; or &apos;Mangled&apos; (or not at all) depending on their damage state. The thresholds for the different types of reclamation can be changed in the mod settings.
+Parts are either reclaimed as 'Non-Sterile' or 'Mangled' (or not at all) depending on their damage state. The thresholds for the different types of reclamation can be changed in the mod settings.
 
-&apos;Non-Sterile&apos; parts simply need some medicine to wipe them down and to be reusable again.
-&apos;Mangled&apos; parts need some basic materials on top of that before they can be reused.
+'Non-Sterile' parts simply need some medicine to wipe them down and to be reusable again.
+'Mangled' parts need some basic materials on top of that before they can be reused.
 
-*I&apos;ve decided against simply &apos;vomiting&apos; out the final usable bionics directly in the harvesting job, since that makes bionic aquisition **way** too easy. But now with this mod you have the option to reclaim those parts you want - or if you feel like making a recycling industry out of your raiders, you can do that - it&apos;s just a bit more involved than &apos;Click, get bionics&apos;* . 
+*I've decided against simply 'vomiting' out the final usable bionics directly in the harvesting job, since that makes bionic aquisition **way** too easy. But now with this mod you have the option to reclaim those parts you want - or if you feel like making a recycling industry out of your raiders, you can do that - it's just a bit more involved than 'Click, get bionics'* . 
 
-Also: Harvesting parts can fail in the same way as medical operations can. So better get your good doctor/engineer to carve up those corpses, or you might loose more than you gain. (Success is mapped to the &apos;medical operation&apos;/&apos;mechanoid disassembly&apos; chance you can see in your colonists info).
+Also: Harvesting parts can fail in the same way as medical operations can. So better get your good doctor/engineer to carve up those corpses, or you might loose more than you gain. (Success is mapped to the 'medical operation'/'mechanoid disassembly' chance you can see in your colonists info).
 
-# Part &apos;Complexity&apos; 
+# Part 'Complexity' 
 
-This mod separates reclaimable parts into three &apos;complexity&apos; tiers: primitive, advanced &amp; glittertech.
+This mod separates reclaimable parts into three 'complexity' tiers: primitive, advanced &amp; glittertech.
 Those tiers *mostly* correspond to tech levels Animal-Medieval, Industrial-Spacer &amp; Ultra and above but also take some other stats like price into account. The effect of this should be that *all* parts from *any* mod should be supported with this mod.
 
 # Changes to vanilla gameplay
 
-This mod adds some special filters to the &apos;corpses&apos; category of stockpile and recipe ingredients which correspond to corpses without any parts, or with parts of a certain complexity.
-The vanilla &apos;butcher corpse&apos; recipe default get&apos;s modified to only use corpses without any parts. You can manually enable the use of corpses with parts if you so like.
+This mod adds some special filters to the 'corpses' category of stockpile and recipe ingredients which correspond to corpses without any parts, or with parts of a certain complexity.
+The vanilla 'butcher corpse' recipe default get's modified to only use corpses without any parts. You can manually enable the use of corpses with parts if you so like.
 
 # (Un-)Installation
 
@@ -57,16 +57,11 @@ If you hve a reclaimed part in your colony and you uninstall the mod that introd
 
 A non steam version is available at https://ludeon.com/forums/index.php?topic=35322.0
 
-### Like my Mods?
-
-https://ko-fi.com/DoctorVanGogh]![Image](https://raw.githubusercontent.com/DoctorVanGogh/Shared/master/Sponsoring/Ko-Fi/buymeacoffee-28.png)
-
-
 ### Looking for an older version?
 
 Get it from https://github.com/DoctorVanGogh/ReclaimReuseRecycle/releases]github
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
