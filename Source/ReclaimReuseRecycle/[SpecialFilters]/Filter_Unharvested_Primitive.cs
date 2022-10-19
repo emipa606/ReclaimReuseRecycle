@@ -1,9 +1,8 @@
-﻿namespace DoctorVanGogh.ReclaimReuseRecycle
+﻿namespace DoctorVanGogh.ReclaimReuseRecycle;
+
+public class Filter_Unharvested_Primitive : Filter_Corpse
 {
-    public class Filter_Unharvested_Primitive : Filter_Corpse
+    public Filter_Unharvested_Primitive() : base(Complexity.Primitive)
     {
-        public Filter_Unharvested_Primitive() : base(Complexity.Primitive)
-        {
-        }
     }
 }

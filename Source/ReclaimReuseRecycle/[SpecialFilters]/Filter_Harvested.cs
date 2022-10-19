@@ -1,27 +1,26 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace DoctorVanGogh.ReclaimReuseRecycle
+namespace DoctorVanGogh.ReclaimReuseRecycle;
+
+public class Filter_Harvested : Filter_Corpse
 {
-    public class Filter_Harvested : Filter_Corpse
+    public Filter_Harvested() : base(null)
     {
-        public Filter_Harvested() : base(null)
-        {
-        }
+    }
 
-        public override bool CanEverMatch(ThingDef def)
-        {
-            return def.IsWithinCategory(ThingCategoryDefOf.Corpses);
-        }
+    public override bool CanEverMatch(ThingDef def)
+    {
+        return def.IsWithinCategory(ThingCategoryDefOf.Corpses);
+    }
 
-        public override bool Matches(Thing t)
-        {
-            return CanEverMatch(t.def) && base.Matches(t);
-        }
+    public override bool Matches(Thing t)
+    {
+        return CanEverMatch(t.def) && base.Matches(t);
+    }
 
-        protected override bool DoesMatch(Corpse corpse)
-        {
-            return corpse == null || base.DoesMatch(corpse);
-        }
+    protected override bool DoesMatch(Corpse corpse)
+    {
+        return corpse == null || base.DoesMatch(corpse);
     }
 }

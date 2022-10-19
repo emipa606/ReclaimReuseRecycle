@@ -1,8 +1,7 @@
-namespace DoctorVanGogh.ReclaimReuseRecycle
+namespace DoctorVanGogh.ReclaimReuseRecycle;
+
+public enum ReclamationType
 {
-    public enum ReclamationType
-    {
-        NonSterile,
-        Mangled
-    }
+    NonSterile,
+    Mangled
 }

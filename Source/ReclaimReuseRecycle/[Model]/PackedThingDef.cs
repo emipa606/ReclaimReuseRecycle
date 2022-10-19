@@ -1,13 +1,12 @@
 ﻿using Verse;
 
-namespace DoctorVanGogh.ReclaimReuseRecycle
+namespace DoctorVanGogh.ReclaimReuseRecycle;
+
+public class PackedThingDef : ThingDef
 {
-    public class PackedThingDef : ThingDef
-    {
-        public ThingDef SpawnOnUnpack { get; set; }
+    public ThingDef SpawnOnUnpack { get; set; }
 
-        public ReclamationType? ReclamationType { get; set; }
+    public ReclamationType? ReclamationType { get; set; }
 
-        public Complexity Complexity { get; set; }
-    }
+    public Complexity Complexity { get; set; }
 }

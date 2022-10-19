@@ -2,78 +2,77 @@
 using System.Linq;
 using Verse;
 
-namespace DoctorVanGogh.ReclaimReuseRecycle
+namespace DoctorVanGogh.ReclaimReuseRecycle;
+
+public abstract class Filter_Corpse : SpecialThingFilterWorker
 {
-    public abstract class Filter_Corpse : SpecialThingFilterWorker
+    private readonly Complexity? _complexity;
+
+    protected Filter_Corpse(Complexity? complexity)
     {
-        private readonly Complexity? _complexity;
+        _complexity = complexity;
+    }
 
-        protected Filter_Corpse(Complexity? complexity)
-        {
-            _complexity = complexity;
-        }
+    public override bool Matches(Thing t)
+    {
+        return DoesMatch(t as Corpse);
+    }
 
-        public override bool Matches(Thing t)
-        {
-            return DoesMatch(t as Corpse);
-        }
+    public override bool AlwaysMatches(ThingDef def)
+    {
+        return false;
+    }
 
-        public override bool AlwaysMatches(ThingDef def)
+    public override bool CanEverMatch(ThingDef def)
+    {
+        return def.IsCorpse;
+    }
+
+    protected virtual bool DoesMatch(Corpse corpse)
+    {
+        if (corpse == null)
         {
             return false;
         }
 
-        public override bool CanEverMatch(ThingDef def)
+        var race = corpse.InnerPawn.RaceProps;
+        var healthTracker = corpse.InnerPawn.health;
+        var diffSet = healthTracker.hediffSet;
+
+
+        if (_complexity == null)
         {
-            return def.IsCorpse;
+            return race.IsMechanoid && !GetReclaimablePartsMechanoid(race, diffSet, healthTracker).Any()
+                   || (race.Humanlike || race.Animal) &&
+                   !GetReclaimablePartsOrganic(race, diffSet, healthTracker).Any();
         }
 
-        protected virtual bool DoesMatch(Corpse corpse)
-        {
-            if (corpse == null)
-            {
-                return false;
-            }
+        return race.IsMechanoid && GetReclaimablePartsMechanoid(race, diffSet, healthTracker)
+                   .Any(pd => pd.Complexity == _complexity)
+               || (race.Humanlike || race.Animal) && GetReclaimablePartsOrganic(race, diffSet, healthTracker)
+                   .Any(pd => pd.Complexity == _complexity);
+    }
 
-            var race = corpse.InnerPawn.RaceProps;
-            var healthTracker = corpse.InnerPawn.health;
-            var diffSet = healthTracker.hediffSet;
-
-
-            if (_complexity == null)
-            {
-                return race.IsMechanoid && !GetReclaimablePartsMechanoid(race, diffSet, healthTracker).Any()
-                       || (race.Humanlike || race.Animal) &&
-                       !GetReclaimablePartsOrganic(race, diffSet, healthTracker).Any();
-            }
-
-            return race.IsMechanoid && GetReclaimablePartsMechanoid(race, diffSet, healthTracker)
-                       .Any(pd => pd.Complexity == _complexity)
-                   || (race.Humanlike || race.Animal) && GetReclaimablePartsOrganic(race, diffSet, healthTracker)
-                       .Any(pd => pd.Complexity == _complexity);
-        }
-
-        public static IEnumerable<PackedThingDef> GetReclaimablePartsMechanoid(RaceProperties race, HediffSet diffSet,
-            Pawn_HealthTracker healthTracker)
-        {
-            return diffSet.GetNotMissingParts()
-                .Where(bpr => bpr.def.spawnThingOnRemoved != null)
-                .Select(bpr =>
-                    ThingDefGenerator_Reclaimed.GetExtractableDef(bpr.def.spawnThingOnRemoved,
-                        Util.HitpointsFactor(bpr, diffSet)))
-                .Where(d => d != null);
-        }
+    public static IEnumerable<PackedThingDef> GetReclaimablePartsMechanoid(RaceProperties race, HediffSet diffSet,
+        Pawn_HealthTracker healthTracker)
+    {
+        return diffSet.GetNotMissingParts()
+            .Where(bpr => bpr.def.spawnThingOnRemoved != null)
+            .Select(bpr =>
+                ThingDefGenerator_Reclaimed.GetExtractableDef(bpr.def.spawnThingOnRemoved,
+                    Util.HitpointsFactor(bpr, diffSet)))
+            .Where(d => d != null);
+    }
 
 
-        public static IEnumerable<PackedThingDef> GetReclaimablePartsOrganic(RaceProperties race, HediffSet diffSet,
-            Pawn_HealthTracker healthTracker)
-        {
-            return diffSet.hediffs
-                .Where(d => d is Hediff_Implant && d.def.spawnThingOnRemoved != null)
-                .Select(d =>
-                    ThingDefGenerator_Reclaimed.GetExtractableDef(d.def.spawnThingOnRemoved,
-                        Util.HitpointsFactor(d.Part, diffSet)))
-                .Where(d => d != null);
-        }
+    public static IEnumerable<PackedThingDef> GetReclaimablePartsOrganic(RaceProperties race, HediffSet diffSet,
+        Pawn_HealthTracker healthTracker)
+    {
+        return diffSet.hediffs
+            .Where(d => d is Hediff_Implant && d.def.spawnThingOnRemoved != null)
+            .Select(d =>
+                ThingDefGenerator_Reclaimed.GetExtractableDef(d.def.spawnThingOnRemoved,
+                    Util.HitpointsFactor(d.Part, diffSet)))
+            .Where(d => d != null);
     }
 }

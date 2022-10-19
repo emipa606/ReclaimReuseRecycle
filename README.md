@@ -10,7 +10,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1120445716
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
 
-# Harvest implants &amp; bionics from corpses and prepare them for reuse by your colonists
+# Harvest implants and bionics from corpses and prepare them for reuse by your colonists
 
 
 This mods adds a new "Harvesting bench" with a new job: Harvesting corpses for [u]artificial[/u] parts. Those parts can then be refurbished to allow reuse (or sale) by your colonists at a "refurbushment bench".
@@ -19,7 +19,7 @@ Parts are separated into 'complexity' tiers and **all** mod added parts are supp
 
 # Research integration
 
-Part harvesting &amp; refurbuishment is gated by tiered research projects.
+Part harvesting and refurbuishment is gated by tiered research projects.
 
 
 # Harvested parts
@@ -71,6 +71,7 @@ Get it from https://github.com/DoctorVanGogh/ReclaimReuseRecycle/releases]github
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 
