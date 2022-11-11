@@ -1,5 +1,8 @@
 # Changelog for ReclaimReuseRecycle
 
+1.4.2 - Rotten corpses can now also be reclaimed, thanks siph!
+
+
 1.4.1 - Mod updated for 1.4 and passed autotests.
 Used DeepL to update translations for ChineseSimplified, French, German, Russian
 
