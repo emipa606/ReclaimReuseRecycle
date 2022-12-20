@@ -35,8 +35,8 @@ Also: Harvesting parts can fail in the same way as medical operations can. So be
 
 # Part 'Complexity' 
 
-This mod separates reclaimable parts into three 'complexity' tiers: primitive, advanced &amp; glittertech.
-Those tiers *mostly* correspond to tech levels Animal-Medieval, Industrial-Spacer &amp; Ultra and above but also take some other stats like price into account. The effect of this should be that *all* parts from *any* mod should be supported with this mod.
+This mod separates reclaimable parts into three 'complexity' tiers: primitive, advanced and glittertech.
+Those tiers *mostly* correspond to tech levels Animal-Medieval, Industrial-Spacer and Ultra and above but also take some other stats like price into account. The effect of this should be that *all* parts from *any* mod should be supported with this mod.
 
 # Changes to vanilla gameplay
 
@@ -75,3 +75,5 @@ Get it from https://github.com/DoctorVanGogh/ReclaimReuseRecycle/releases]github
 
 
 
+
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2567364887]Last updated 2022-12-20

@@ -61,8 +61,8 @@ Parts are either reclaimed as 'Non-Sterile' or 'Mangled' (or not at all) dependi
 Also: Harvesting parts can fail in the same way as medical operations can. So better get your good doctor/engineer to carve up those corpses, or you might loose more than you gain. (Success is mapped to the 'medical operation'/'mechanoid disassembly' chance you can see in your colonists info).
 
 [h1]Part 'Complexity' [/h1]
-This mod separates reclaimable parts into three 'complexity' tiers: primitive, advanced &amp;amp; glittertech.
-Those tiers [i]mostly[/i] correspond to tech levels Animal-Medieval, Industrial-Spacer &amp;amp; Ultra and above but also take some other stats like price into account. The effect of this should be that [i]all[/i] parts from [i]any[/i] mod should be supported with this mod.
+This mod separates reclaimable parts into three 'complexity' tiers: primitive, advanced and glittertech.
+Those tiers [i]mostly[/i] correspond to tech levels Animal-Medieval, Industrial-Spacer and Ultra and above but also take some other stats like price into account. The effect of this should be that [i]all[/i] parts from [i]any[/i] mod should be supported with this mod.
 
 [h1]Changes to vanilla gameplay[/h1]
 This mod adds some special filters to the 'corpses' category of stockpile and recipe ingredients which correspond to corpses without any parts, or with parts of a certain complexity.
@@ -93,5 +93,7 @@ Get it from [url=https://github.com/DoctorVanGogh/ReclaimReuseRecycle/releases]g
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [/list]
 
-</description>
+
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2567364887]Last updated 2022-12-20[/url]</description>
 </ModMetaData>
