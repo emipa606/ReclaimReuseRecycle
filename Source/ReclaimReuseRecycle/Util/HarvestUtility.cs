@@ -120,7 +120,7 @@ public static class HarvestUtility
             }
 
             /* HACK:
-             * workaround for case with totally everything destroyed in this corpse except 
+             * workaround for case with totally everything destroyed in this corpse except
              * "Waist" which has a coverage of 0% which makes GetRandomElementByWeight blow
              * because.... .... *duh*(?)
              */
@@ -177,12 +177,12 @@ public static class HarvestUtility
 
         if (race.IsMechanoid)
         {
-            return Filter_Corpse.GetReclaimablePartsMechanoid(race, diffSet, healthTracker);
+            return Filter_Corpse.GetReclaimablePartsMechanoid(diffSet);
         }
 
         if (race.Humanlike || race.Animal)
         {
-            return Filter_Corpse.GetReclaimablePartsOrganic(race, diffSet, healthTracker);
+            return Filter_Corpse.GetReclaimablePartsOrganic(diffSet);
         }
 
         return Enumerable.Empty<PackedThingDef>();

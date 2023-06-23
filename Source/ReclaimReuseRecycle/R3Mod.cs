@@ -17,12 +17,14 @@ public class R3Mod : Mod
 
     private static string[] _tagLines;
     private static string currentVersion;
+    public static R3Mod instance;
+    public readonly bool EbfLoaded;
+    public readonly MethodInfo GetMaxHealthInfo;
     private Texture2D _logo;
 
     private DateTime lastChange = DateTime.Now;
 
     private string TagLine;
-
 
     public R3Mod(ModContentPack content) : base(content)
     {
@@ -35,8 +37,16 @@ public class R3Mod : Mod
 
         ContentPack = content;
         currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(
-                ModLister.GetActiveModWithIdentifier("Mlie.ReclaimReuseRecycle"));
+            VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
+        EbfLoaded = ModLister.GetActiveModWithIdentifier("V1024.EBFramework") != null;
+        instance = this;
+        if (!EbfLoaded)
+        {
+            return;
+        }
+
+        Log.Message("[ReclaimReuseRecycle]: added patch for Elite Bionics Framework");
+        GetMaxHealthInfo = AccessTools.Method("EBF.VanillaExtender:GetMaxHealth");
     }
 
     public ModContentPack ContentPack { get; }

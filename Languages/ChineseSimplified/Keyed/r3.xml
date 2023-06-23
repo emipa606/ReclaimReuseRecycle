@@ -11,4 +11,20 @@
   <R3.MaxComplexity>最大。复杂度</R3.MaxComplexity>
   <R3.Reclamation.Mangled>错乱的</R3.Reclamation.Mangled>
   <R3.Reclamation.NonSterile>非无菌</R3.Reclamation.NonSterile>
+  <R3.Tagline><![CDATA[不要扔掉，循环利用，以备不时之需。
+不要扔掉它，它可以用在其他方面。
+不要把你的未来扔掉!
+在你扔掉它之前，请想一想，它可能会有一些用处!
+钱长在树上：回收钉子腿。
+永远不要拒绝重复使用。
+一次是不够的，要回收利用。
+回收现在，拯救未来。
+回收者一遍又一遍地做。
+浪费一次......付出两次!
+当有疑问时，不要把它扔掉!
+当你拒绝重复使用时，你就会滥用你的Rimworld。]]></R3.Tagline>
+  <R3.Label><![CDATA[{2} {0}]]></R3.Label>
+  <R3.RangeExplanation><![CDATA[以下设置控制了尸体的部分需要具备的健康范围，以使其可以作为相应的物品类型被恢复。
+<size=12><i><color=>]]></R3.RangeExplanation>
+  <R3.Settings.Recoverable><![CDATA[可作为<b>{1}</b>项恢复。]]></R3.Settings.Recoverable>
 </LanguageData>

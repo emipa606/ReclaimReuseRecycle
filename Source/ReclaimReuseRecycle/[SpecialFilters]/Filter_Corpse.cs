@@ -42,19 +42,18 @@ public abstract class Filter_Corpse : SpecialThingFilterWorker
 
         if (_complexity == null)
         {
-            return race.IsMechanoid && !GetReclaimablePartsMechanoid(race, diffSet, healthTracker).Any()
+            return race.IsMechanoid && !GetReclaimablePartsMechanoid(diffSet).Any()
                    || (race.Humanlike || race.Animal) &&
-                   !GetReclaimablePartsOrganic(race, diffSet, healthTracker).Any();
+                   !GetReclaimablePartsOrganic(diffSet).Any();
         }
 
-        return race.IsMechanoid && GetReclaimablePartsMechanoid(race, diffSet, healthTracker)
+        return race.IsMechanoid && GetReclaimablePartsMechanoid(diffSet)
                    .Any(pd => pd.Complexity == _complexity)
-               || (race.Humanlike || race.Animal) && GetReclaimablePartsOrganic(race, diffSet, healthTracker)
+               || (race.Humanlike || race.Animal) && GetReclaimablePartsOrganic(diffSet)
                    .Any(pd => pd.Complexity == _complexity);
     }
 
-    public static IEnumerable<PackedThingDef> GetReclaimablePartsMechanoid(RaceProperties race, HediffSet diffSet,
-        Pawn_HealthTracker healthTracker)
+    public static IEnumerable<PackedThingDef> GetReclaimablePartsMechanoid(HediffSet diffSet)
     {
         return diffSet.GetNotMissingParts()
             .Where(bpr => bpr.def.spawnThingOnRemoved != null)
@@ -65,8 +64,7 @@ public abstract class Filter_Corpse : SpecialThingFilterWorker
     }
 
 
-    public static IEnumerable<PackedThingDef> GetReclaimablePartsOrganic(RaceProperties race, HediffSet diffSet,
-        Pawn_HealthTracker healthTracker)
+    public static IEnumerable<PackedThingDef> GetReclaimablePartsOrganic(HediffSet diffSet)
     {
         return diffSet.hediffs
             .Where(d => d is Hediff_Implant && d.def.spawnThingOnRemoved != null)

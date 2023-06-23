@@ -11,4 +11,20 @@
   <R3.MaxComplexity>Max. Komplexität</R3.MaxComplexity>
   <R3.Reclamation.Mangled>Verstümmelt</R3.Reclamation.Mangled>
   <R3.Reclamation.NonSterile>Unsteril</R3.Reclamation.NonSterile>
+  <R3.Tagline><![CDATA[Nicht wegwerfen, sondern wiederverwerten.
+Werfen Sie es nicht weg, es kann anderweitig verwendet werden.
+Werfen Sie Ihre Zukunft nicht weg!
+Denk nach, bevor du es wegwirfst, es könnte eine Verwendung dafür geben!
+Geld wächst auf Bäumen: Recyceln Sie Holzbeine.
+Verweigere niemals die Wiederverwendung.
+Einmal ist nicht genug, recyceln Sie.
+Recycle die Gegenwart, rette die Zukunft.
+Wer recycelt, tut es immer und immer wieder.
+Verschwende es einmal... bezahle es zweimal!
+Im Zweifelsfall wirf es nicht weg!
+Wenn du dich weigerst, es wiederzuverwenden, missbrauchst du deine Rimworld.]]></R3.Tagline>
+  <R3.Label><![CDATA[{2} {0}]]></R3.Label>
+  <R3.RangeExplanation><![CDATA[Die folgenden Einstellungen steuern den Gesundheitsbereich, den ein Leichenteil haben muss, um als der jeweilige Gegenstandstyp wiederherstellbar zu sein.
+<size=12><i><color=]]></R3.RangeExplanation>
+  <R3.Settings.Recoverable><![CDATA[Wiederherstellbar als <b>{1}</b> Gegenstand]]></R3.Settings.Recoverable>
 </LanguageData>

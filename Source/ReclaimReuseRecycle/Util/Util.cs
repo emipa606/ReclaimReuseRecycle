@@ -53,7 +53,18 @@ public static class Util
     /// <returns>Body part's health percentage.</returns>
     public static float HitpointsFactor(BodyPartRecord part, HediffSet hediffSet)
     {
-        return hediffSet.GetPartHealth(part) / part.def.GetMaxHealth(hediffSet.pawn);
+        float maxHealthPart;
+        if (R3Mod.instance.EbfLoaded)
+        {
+            maxHealthPart =
+                (float)R3Mod.instance.GetMaxHealthInfo.Invoke(null, new object[] { part.def, hediffSet.pawn, part });
+        }
+        else
+        {
+            maxHealthPart = part.def.GetMaxHealth(hediffSet.pawn);
+        }
+
+        return hediffSet.GetPartHealth(part) / maxHealthPart;
     }
 
     public static void Error(string message)
