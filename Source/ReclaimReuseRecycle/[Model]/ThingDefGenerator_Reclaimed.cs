@@ -286,12 +286,10 @@ public static class ThingDefGenerator_Reclaimed
             return null;
         }
 
-        if (LookupCache.TryGetValue(def, out var elements))
-        {
-            return elements.FirstOrDefault(p => p.ReclamationType == t.Value);
-        }
-
-        Log.Message($"[ReclaimReuseRecycle]: Failed to find {def} in LookupCache");
-        return null;
+        return LookupCache.TryGetValue(def, out var elements)
+            ? elements.FirstOrDefault(p => p.ReclamationType == t.Value)
+            :
+            //Log.Message($"[ReclaimReuseRecycle]: Failed to find {def} in LookupCache");
+            null;
     }
 }

@@ -1,5 +1,8 @@
 # Changelog for ReclaimReuseRecycle
 
+1.4.6 - Removed verbose logging
+
+
 1.4.5 - Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1665403571]Elite Bionics Framework[/url].
 Used DeepL to update translations for ChineseSimplified, French, German, Russian
 
