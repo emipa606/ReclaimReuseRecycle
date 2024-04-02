@@ -52,7 +52,7 @@ public class R3Mod : Mod
     public ModContentPack ContentPack { get; }
 
     public static string[] TagLines => _tagLines ?? (_tagLines = LanguageKeys.r3.R3_Tagline.Translate().RawText
-        .Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries));
+        .Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries));
 
     public Texture2D Logo => _logo ?? (_logo = ContentFinder<Texture2D>.Get("UI/Recycle"));
 

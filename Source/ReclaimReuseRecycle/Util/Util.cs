@@ -46,7 +46,7 @@ public static class Util
     }
 
     /// <summary>
-    ///     Get's a <see cref="BodyPartRecord" />'s health percentage.
+    ///     Gets a <see cref="BodyPartRecord" />'s health percentage.
     /// </summary>
     /// <param name="part">Part to get the health percentage for.</param>
     /// <param name="hediffSet"><see cref="HediffSet" /> tracking the owning <see cref="Pawn" />'s injuries.</param>
@@ -57,7 +57,7 @@ public static class Util
         if (R3Mod.instance.EbfLoaded)
         {
             maxHealthPart =
-                (float)R3Mod.instance.GetMaxHealthInfo.Invoke(null, new object[] { part.def, hediffSet.pawn, part });
+                (float)R3Mod.instance.GetMaxHealthInfo.Invoke(null, [part.def, hediffSet.pawn, part]);
         }
         else
         {

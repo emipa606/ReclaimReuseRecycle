@@ -1,6 +1,5 @@
 ﻿namespace DoctorVanGogh.ReclaimReuseRecycle.Patches;
 
-
 /*
 [HarmonyPatch(typeof(ThingMaker), nameof(ThingMaker.MakeThing))]
 class Debug {

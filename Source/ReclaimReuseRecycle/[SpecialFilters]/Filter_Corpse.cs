@@ -4,15 +4,8 @@ using Verse;
 
 namespace DoctorVanGogh.ReclaimReuseRecycle;
 
-public abstract class Filter_Corpse : SpecialThingFilterWorker
+public abstract class Filter_Corpse(Complexity? complexity) : SpecialThingFilterWorker
 {
-    private readonly Complexity? _complexity;
-
-    protected Filter_Corpse(Complexity? complexity)
-    {
-        _complexity = complexity;
-    }
-
     public override bool Matches(Thing t)
     {
         return DoesMatch(t as Corpse);
@@ -40,7 +33,7 @@ public abstract class Filter_Corpse : SpecialThingFilterWorker
         var diffSet = healthTracker.hediffSet;
 
 
-        if (_complexity == null)
+        if (complexity == null)
         {
             return race.IsMechanoid && !GetReclaimablePartsMechanoid(diffSet).Any()
                    || (race.Humanlike || race.Animal) &&
@@ -48,9 +41,9 @@ public abstract class Filter_Corpse : SpecialThingFilterWorker
         }
 
         return race.IsMechanoid && GetReclaimablePartsMechanoid(diffSet)
-                   .Any(pd => pd.Complexity == _complexity)
+                   .Any(pd => pd.Complexity == complexity)
                || (race.Humanlike || race.Animal) && GetReclaimablePartsOrganic(diffSet)
-                   .Any(pd => pd.Complexity == _complexity);
+                   .Any(pd => pd.Complexity == complexity);
     }
 
     public static IEnumerable<PackedThingDef> GetReclaimablePartsMechanoid(HediffSet diffSet)

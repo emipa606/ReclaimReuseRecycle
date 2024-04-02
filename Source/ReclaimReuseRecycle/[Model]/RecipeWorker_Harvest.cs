@@ -5,19 +5,19 @@ namespace DoctorVanGogh.ReclaimReuseRecycle;
 
 public class RecipeWorker_Harvest : RecipeWorker
 {
-    public static RecipeDef[] HarvestFleshRecipes =
-    {
+    public static readonly RecipeDef[] HarvestFleshRecipes =
+    [
         R3DefOf.R3_HarvestCorpseFlesh_Primitive,
         R3DefOf.R3_HarvestCorpseFlesh_Advanced,
         R3DefOf.R3_HarvestCorpseFlesh_Glittertech
-    };
+    ];
 
-    public static RecipeDef[] HarvestMechanoidRecipes =
-    {
+    public static readonly RecipeDef[] HarvestMechanoidRecipes =
+    [
         R3DefOf.R3_HarvestCorpseMechanoid_Primitive,
         R3DefOf.R3_HarvestCorpseMechanoid_Advanced,
         R3DefOf.R3_HarvestCorpseMechanoid_Glittertech
-    };
+    ];
 
     public override void ConsumeIngredient(Thing ingredient, RecipeDef recipe, Map map)
     {

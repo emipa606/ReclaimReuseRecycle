@@ -3,12 +3,8 @@ using Verse;
 
 namespace DoctorVanGogh.ReclaimReuseRecycle;
 
-public class Filter_Harvested : Filter_Corpse
+public class Filter_Harvested() : Filter_Corpse(null)
 {
-    public Filter_Harvested() : base(null)
-    {
-    }
-
     public override bool CanEverMatch(ThingDef def)
     {
         return def.IsWithinCategory(ThingCategoryDefOf.Corpses);

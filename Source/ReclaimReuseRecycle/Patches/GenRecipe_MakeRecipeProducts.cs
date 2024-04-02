@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using Verse;
@@ -9,17 +8,17 @@ namespace DoctorVanGogh.ReclaimReuseRecycle;
 [HarmonyPatch(typeof(GenRecipe), nameof(GenRecipe.MakeRecipeProducts))]
 public class GenRecipe_MakeRecipeProducts
 {
-    private static readonly Thing[] Empty = Array.Empty<Thing>();
+    private static readonly Thing[] Empty = [];
 
     private static readonly RecipeDef[] ReclamationRecipes =
-    {
+    [
         R3DefOf.R3_Refurbish_Primitive,
         R3DefOf.R3_Refurbish_Advanced,
         R3DefOf.R3_Refurbish_Glittertech,
         R3DefOf.R3_Sterilize_Primitive,
         R3DefOf.R3_Sterilize_Advanced,
         R3DefOf.R3_Sterilize_Glittertech
-    };
+    ];
 
     public static void Postfix(ref IEnumerable<Thing> __result, RecipeDef recipeDef, Pawn worker,
         List<Thing> ingredients, Thing dominantIngredient)

@@ -22,7 +22,7 @@ public static class ThingDefGenerator_Reclaimed
     public static readonly string NonSterileColorHex = NonSterileColor.ToHexColor();
 
 
-    private static readonly Type[] validHediffs = { typeof(Hediff_AddedPart), typeof(Hediff_Implant) };
+    private static readonly Type[] validHediffs = [typeof(Hediff_AddedPart), typeof(Hediff_Implant)];
 
     public static Dictionary<ThingDef, PackedThingDef[]> LookupCache;
 
@@ -117,15 +117,12 @@ public static class ThingDefGenerator_Reclaimed
             altitudeLayer = AltitudeLayer.Item,
             tickerType = TickerType.Never,
             alwaysHaulable = true,
-            tradeTags = new List<string>(),
-            comps = new List<CompProperties>
-            {
-                new CompProperties_Forbiddable()
-            },
-            thingCategories = new List<ThingCategoryDef>(),
+            tradeTags = [],
+            comps = [new CompProperties_Forbiddable()],
+            thingCategories = [],
             pathCost = 10,
-            techHediffsTags = t.techHediffsTags != null ? new List<string>(t.techHediffsTags) : null,
-            statBases = new List<StatModifier>(),
+            techHediffsTags = t.techHediffsTags != null ? [..t.techHediffsTags] : null,
+            statBases = [],
             //SpawnOnUnpack = t,
             ReclamationType = type,
 
