@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Advanced Harvesting -->
+  <R3_AdvancedHarvesting.label>Advanced Harvesting</R3_AdvancedHarvesting.label>
+  <!-- EN: Knowledge how to extract parts of advanced complexity from corpses. -->
+  <R3_AdvancedHarvesting.description>Knowledge how to extract parts of advanced complexity from corpses.</R3_AdvancedHarvesting.description>
+  <!-- EN: Advanced Refurbishment -->
+  <R3_AdvancedRefurbishment.label>Advanced Refurbishment</R3_AdvancedRefurbishment.label>
+  <!-- EN: Knowledge how to sterilze & refurbish reclaimed parts of advanced complexity. -->
+  <R3_AdvancedRefurbishment.description>Knowledge how to sterilze &amp; refurbish reclaimed parts of advanced complexity.</R3_AdvancedRefurbishment.description>
+  <!-- EN: Basic Harvesting -->
+  <R3_BasicHarvesting.label>Basic Harvesting</R3_BasicHarvesting.label>
+  <!-- EN: Knowledge how to extract parts of basic complexity from corpses. -->
+  <R3_BasicHarvesting.description>Knowledge how to extract parts of basic complexity from corpses.</R3_BasicHarvesting.description>
+  <!-- EN: Basic Refurbishment -->
+  <R3_BasicRefurbishment.label>Basic Refurbishment</R3_BasicRefurbishment.label>
+  <!-- EN: Knowledge how to sterilze & refurbish reclaimed parts of basic complexity. -->
+  <R3_BasicRefurbishment.description>Knowledge how to sterilze &amp; refurbish reclaimed parts of basic complexity.</R3_BasicRefurbishment.description>
+  <!-- EN: Glittertech Harvesting -->
+  <R3_GlittertechHarvesting.label>Glittertech Harvesting</R3_GlittertechHarvesting.label>
+  <!-- EN: Knowledge how to extract parts of Glittertech complexity from corpses. -->
+  <R3_GlittertechHarvesting.description>Knowledge how to extract parts of Glittertech complexity from corpses.</R3_GlittertechHarvesting.description>
+  <!-- EN: Glittertech Refurbishment -->
+  <R3_GlittertechRefurbishment.label>Glittertech Refurbishment</R3_GlittertechRefurbishment.label>
+  <!-- EN: Knowledge how to sterilze & refurbish reclaimed parts of Glittertech complexity. -->
+  <R3_GlittertechRefurbishment.description>Knowledge how to sterilze &amp; refurbish reclaimed parts of Glittertech complexity.</R3_GlittertechRefurbishment.description>
+</LanguageData>

@@ -99,7 +99,7 @@ public static class HarvestUtility
         GiveRandomSurgeryInjuriesUnrestricted(p, 90, null);
     }
 
-    public static void GiveRandomSurgeryInjuriesUnrestricted(Pawn p, int totalDamage, BodyPartRecord part)
+    private static void GiveRandomSurgeryInjuriesUnrestricted(Pawn p, int totalDamage, BodyPartRecord part)
     {
         var targets = p.health.hediffSet.GetNotMissingParts();
 
@@ -168,7 +168,7 @@ public static class HarvestUtility
     {
         if (corpse == null)
         {
-            return Enumerable.Empty<PackedThingDef>();
+            return [];
         }
 
         var race = corpse.InnerPawn.RaceProps;
@@ -185,6 +185,6 @@ public static class HarvestUtility
             return Filter_Corpse.GetReclaimablePartsOrganic(diffSet);
         }
 
-        return Enumerable.Empty<PackedThingDef>();
+        return [];
     }
 }

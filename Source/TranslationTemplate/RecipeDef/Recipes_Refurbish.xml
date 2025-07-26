@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Refurbish advanced body part. -->
+  <R3_Refurbish_Advanced.label>Refurbish advanced body part.</R3_Refurbish_Advanced.label>
+  <!-- EN: Refurbish and clean a mangled body part and prepare it for reuse. -->
+  <R3_Refurbish_Advanced.description>Refurbish and clean a mangled body part and prepare it for reuse.</R3_Refurbish_Advanced.description>
+  <!-- EN: Refurbishing mangled part -->
+  <R3_Refurbish_Advanced.jobString>Refurbishing mangled part</R3_Refurbish_Advanced.jobString>
+  <!-- EN: Refurbish glittertech body part. -->
+  <R3_Refurbish_Glittertech.label>Refurbish glittertech body part.</R3_Refurbish_Glittertech.label>
+  <!-- EN: Refurbish and clean a mangled body part and prepare it for reuse. -->
+  <R3_Refurbish_Glittertech.description>Refurbish and clean a mangled body part and prepare it for reuse.</R3_Refurbish_Glittertech.description>
+  <!-- EN: Refurbishing mangled part -->
+  <R3_Refurbish_Glittertech.jobString>Refurbishing mangled part</R3_Refurbish_Glittertech.jobString>
+  <!-- EN: Refurbish primitive body part. -->
+  <R3_Refurbish_Primitive.label>Refurbish primitive body part.</R3_Refurbish_Primitive.label>
+  <!-- EN: Refurbish and clean a mangled body part and prepare it for reuse. -->
+  <R3_Refurbish_Primitive.description>Refurbish and clean a mangled body part and prepare it for reuse.</R3_Refurbish_Primitive.description>
+  <!-- EN: Refurbishing mangled part -->
+  <R3_Refurbish_Primitive.jobString>Refurbishing mangled part</R3_Refurbish_Primitive.jobString>
+  <!-- EN: Sterilize advanced body part. -->
+  <R3_Sterilize_Advanced.label>Sterilize advanced body part.</R3_Sterilize_Advanced.label>
+  <!-- EN: Meticulously clean a reclaimed body part and prepare it for reuse. -->
+  <R3_Sterilize_Advanced.description>Meticulously clean a reclaimed body part and prepare it for reuse.</R3_Sterilize_Advanced.description>
+  <!-- EN: Sterilizing reclaimed part -->
+  <R3_Sterilize_Advanced.jobString>Sterilizing reclaimed part</R3_Sterilize_Advanced.jobString>
+  <!-- EN: Sterilize glittertech body part. -->
+  <R3_Sterilize_Glittertech.label>Sterilize glittertech body part.</R3_Sterilize_Glittertech.label>
+  <!-- EN: Meticulously clean a reclaimed body part and prepare it for reuse. -->
+  <R3_Sterilize_Glittertech.description>Meticulously clean a reclaimed body part and prepare it for reuse.</R3_Sterilize_Glittertech.description>
+  <!-- EN: Sterilizing reclaimed part -->
+  <R3_Sterilize_Glittertech.jobString>Sterilizing reclaimed part</R3_Sterilize_Glittertech.jobString>
+  <!-- EN: Sterilize primitive body part. -->
+  <R3_Sterilize_Primitive.label>Sterilize primitive body part.</R3_Sterilize_Primitive.label>
+  <!-- EN: Meticulously clean a reclaimed body part and prepare it for reuse. -->
+  <R3_Sterilize_Primitive.description>Meticulously clean a reclaimed body part and prepare it for reuse.</R3_Sterilize_Primitive.description>
+  <!-- EN: Sterilizing reclaimed part -->
+  <R3_Sterilize_Primitive.jobString>Sterilizing reclaimed part</R3_Sterilize_Primitive.jobString>
+</LanguageData>

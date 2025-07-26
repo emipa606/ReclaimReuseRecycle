@@ -20,14 +20,13 @@ internal class Corpse_SpecialDisplayStats
 
         var maxComplexity = complexities.Max();
 
-        __result = __result.Concat(new[]
-        {
+        __result = __result.Concat([
             new StatDrawEntry(
                 R3DefOf.ReclaimedItem,
                 LanguageKeys.r3.R3_MaxComplexity.Translate(),
                 maxComplexity.ToString(),
                 null,
                 0)
-        });
+        ]);
     }
 }

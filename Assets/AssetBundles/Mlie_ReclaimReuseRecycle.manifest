@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 2445581884
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6f70362f9aaabd75345991d8ae37527e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 6f70362f9aaabd75345991d8ae37527e
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/RefurbishmentBench_south.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/RefurbishmentBench_westm.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/RefurbishmentBench_west.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/HarvestingBench_eastm.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/HarvestingBench_north.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/UI/Recycle.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/HarvestingBench_east.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/RefurbishmentBench_southm.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/HarvestingBench_southm.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/HarvestingBench_west.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/RefurbishmentBench_east.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/HarvestingBench_south.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/RefurbishmentBench_eastm.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/RefurbishmentBench_north.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/HarvestingBench_northm.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/HarvestingBench_westm.png
+- Assets/Data/Mlie.ReclaimReuseRecycle/Textures/Things/Building/Production/RefurbishmentBench_northm.png
+Dependencies: []

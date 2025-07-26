@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: harvest corpse -->
+  <R3_DoWorkHarvestCorpse.label>harvest corpse</R3_DoWorkHarvestCorpse.label>
+  <!-- EN: working at -->
+  <R3_DoWorkHarvestCorpse.gerund>working at</R3_DoWorkHarvestCorpse.gerund>
+  <!-- EN: work -->
+  <R3_DoWorkHarvestCorpse.verb>work</R3_DoWorkHarvestCorpse.verb>
+  <!-- EN: refurbish/clean part -->
+  <R3_DoWorkRefurbish.label>refurbish/clean part</R3_DoWorkRefurbish.label>
+  <!-- EN: working at -->
+  <R3_DoWorkRefurbish.gerund>working at</R3_DoWorkRefurbish.gerund>
+  <!-- EN: work -->
+  <R3_DoWorkRefurbish.verb>work</R3_DoWorkRefurbish.verb>
+</LanguageData>

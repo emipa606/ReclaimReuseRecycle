@@ -5,8 +5,8 @@ namespace DoctorVanGogh.ReclaimReuseRecycle;
 
 internal class StatPart_Reclaimed : StatPart
 {
-    public const float factorNonSterile = 0.65f;
-    public const float factorMangled = 0.35f;
+    private const float factorNonSterile = 0.65f;
+    private const float factorMangled = 0.35f;
 
 
     private static float? GetValueMultiplier(PackedThingDef def)

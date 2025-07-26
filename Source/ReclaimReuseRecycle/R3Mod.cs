@@ -38,7 +38,7 @@ public class R3Mod : Mod
         ContentPack = content;
         currentVersion =
             VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
-        EbfLoaded = ModLister.GetActiveModWithIdentifier("V1024.EBFramework") != null;
+        EbfLoaded = ModLister.GetActiveModWithIdentifier("V1024.EBFramework", true) != null;
         instance = this;
         if (!EbfLoaded)
         {
@@ -51,10 +51,10 @@ public class R3Mod : Mod
 
     public ModContentPack ContentPack { get; }
 
-    public static string[] TagLines => _tagLines ?? (_tagLines = LanguageKeys.r3.R3_Tagline.Translate().RawText
+    private static string[] TagLines => _tagLines ?? (_tagLines = LanguageKeys.r3.R3_Tagline.Translate().RawText
         .Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries));
 
-    public Texture2D Logo => _logo ?? (_logo = ContentFinder<Texture2D>.Get("UI/Recycle"));
+    private Texture2D Logo => _logo ?? (_logo = ContentFinder<Texture2D>.Get("UI/Recycle"));
 
     public override string SettingsCategory()
     {

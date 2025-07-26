@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: harvested -->
+  <R3_AllowHarvested.label>harvested</R3_AllowHarvested.label>
+  <!-- EN: Allow corpses with no remaining added parts or implants. -->
+  <R3_AllowHarvested.description>Allow corpses with no remaining added parts or implants.</R3_AllowHarvested.description>
+  <!-- EN: unharvested (advanced) -->
+  <R3_AllowUnharvested_Advanced.label>unharvested (advanced)</R3_AllowUnharvested_Advanced.label>
+  <!-- EN: Allow corpses with remaining added parts or implants of advanced complexity that could be reclaimed. -->
+  <R3_AllowUnharvested_Advanced.description>Allow corpses with remaining added parts or implants of advanced complexity that could be reclaimed.</R3_AllowUnharvested_Advanced.description>
+  <!-- EN: unharvested (glittertech) -->
+  <R3_AllowUnharvested_Glittertech.label>unharvested (glittertech)</R3_AllowUnharvested_Glittertech.label>
+  <!-- EN: Allow corpses with remaining added parts or implants of Glittertech complexity that could be reclaimed. -->
+  <R3_AllowUnharvested_Glittertech.description>Allow corpses with remaining added parts or implants of Glittertech complexity that could be reclaimed.</R3_AllowUnharvested_Glittertech.description>
+  <!-- EN: unharvested (primitive) -->
+  <R3_AllowUnharvested_Primitive.label>unharvested (primitive)</R3_AllowUnharvested_Primitive.label>
+  <!-- EN: Allow corpses with remaining added parts or implants of primitive complexity that could be reclaimed. -->
+  <R3_AllowUnharvested_Primitive.description>Allow corpses with remaining added parts or implants of primitive complexity that could be reclaimed.</R3_AllowUnharvested_Primitive.description>
+</LanguageData>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: harvest corpse (advanced) -->
+  <R3_HarvestCorpseFlesh_Advanced.label>harvest corpse (advanced)</R3_HarvestCorpseFlesh_Advanced.label>
+  <!-- EN: Harvest a corpse for reclaimable parts & implants of advanced complexity or lower. -->
+  <R3_HarvestCorpseFlesh_Advanced.description>Harvest a corpse for reclaimable parts &amp; implants of advanced complexity or lower.</R3_HarvestCorpseFlesh_Advanced.description>
+  <!-- EN: Harvesting a corpse -->
+  <R3_HarvestCorpseFlesh_Advanced.jobString>Harvesting a corpse</R3_HarvestCorpseFlesh_Advanced.jobString>
+  <!-- EN: harvest corpse (Glittertech) -->
+  <R3_HarvestCorpseFlesh_Glittertech.label>harvest corpse (Glittertech)</R3_HarvestCorpseFlesh_Glittertech.label>
+  <!-- EN: Harvest a corpse for reclaimable parts & implants of Glittertech complexity or lower. -->
+  <R3_HarvestCorpseFlesh_Glittertech.description>Harvest a corpse for reclaimable parts &amp; implants of Glittertech complexity or lower.</R3_HarvestCorpseFlesh_Glittertech.description>
+  <!-- EN: Harvesting a corpse -->
+  <R3_HarvestCorpseFlesh_Glittertech.jobString>Harvesting a corpse</R3_HarvestCorpseFlesh_Glittertech.jobString>
+  <!-- EN: harvest corpse (primitive) -->
+  <R3_HarvestCorpseFlesh_Primitive.label>harvest corpse (primitive)</R3_HarvestCorpseFlesh_Primitive.label>
+  <!-- EN: Harvest a corpse for reclaimable parts & implants of primitive complexity. -->
+  <R3_HarvestCorpseFlesh_Primitive.description>Harvest a corpse for reclaimable parts &amp; implants of primitive complexity.</R3_HarvestCorpseFlesh_Primitive.description>
+  <!-- EN: Harvesting a corpse -->
+  <R3_HarvestCorpseFlesh_Primitive.jobString>Harvesting a corpse</R3_HarvestCorpseFlesh_Primitive.jobString>
+  <!-- EN: harvest mechanoid (advanced) -->
+  <R3_HarvestCorpseMechanoid_Advanced.label>harvest mechanoid (advanced)</R3_HarvestCorpseMechanoid_Advanced.label>
+  <!-- EN: Harvest a mechanoid corpse for reclaimable parts of advanced complexity or lower. -->
+  <R3_HarvestCorpseMechanoid_Advanced.description>Harvest a mechanoid corpse for reclaimable parts of advanced complexity or lower.</R3_HarvestCorpseMechanoid_Advanced.description>
+  <!-- EN: Harvesting a corpse -->
+  <R3_HarvestCorpseMechanoid_Advanced.jobString>Harvesting a corpse</R3_HarvestCorpseMechanoid_Advanced.jobString>
+  <!-- EN: harvest mechanoid (Glittertech) -->
+  <R3_HarvestCorpseMechanoid_Glittertech.label>harvest mechanoid (Glittertech)</R3_HarvestCorpseMechanoid_Glittertech.label>
+  <!-- EN: Harvest a mechanoid corpse for reclaimable parts of glittertech complexity or lower. -->
+  <R3_HarvestCorpseMechanoid_Glittertech.description>Harvest a mechanoid corpse for reclaimable parts of glittertech complexity or lower.</R3_HarvestCorpseMechanoid_Glittertech.description>
+  <!-- EN: Harvesting a corpse -->
+  <R3_HarvestCorpseMechanoid_Glittertech.jobString>Harvesting a corpse</R3_HarvestCorpseMechanoid_Glittertech.jobString>
+  <!-- EN: harvest mechanoid (primitive) -->
+  <R3_HarvestCorpseMechanoid_Primitive.label>harvest mechanoid (primitive)</R3_HarvestCorpseMechanoid_Primitive.label>
+  <!-- EN: Harvest a mechanoid corpse for reclaimable parts of primitive complexity. -->
+  <R3_HarvestCorpseMechanoid_Primitive.description>Harvest a mechanoid corpse for reclaimable parts of primitive complexity.</R3_HarvestCorpseMechanoid_Primitive.description>
+  <!-- EN: Harvesting a corpse -->
+  <R3_HarvestCorpseMechanoid_Primitive.jobString>Harvesting a corpse</R3_HarvestCorpseMechanoid_Primitive.jobString>
+</LanguageData>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Mangled Body Parts -->
+  <BodyPartsMangled.label>Mangled Body Parts</BodyPartsMangled.label>
+  <!-- EN: Advanced Mangled Body Part -->
+  <BodyPartsMangled_Advanced.label>Advanced Mangled Body Part</BodyPartsMangled_Advanced.label>
+  <!-- EN: Glittertech Mangled Body Part -->
+  <BodyPartsMangled_Glittertech.label>Glittertech Mangled Body Part</BodyPartsMangled_Glittertech.label>
+  <!-- EN: Primitive Mangled Body Part -->
+  <BodyPartsMangled_Primitive.label>Primitive Mangled Body Part</BodyPartsMangled_Primitive.label>
+  <!-- EN: Non-Sterile Body Part -->
+  <BodyPartsNonSterile.label>Non-Sterile Body Part</BodyPartsNonSterile.label>
+  <!-- EN: Advanced Non-Sterile Body Part -->
+  <BodyPartsNonSterile_Advanced.label>Advanced Non-Sterile Body Part</BodyPartsNonSterile_Advanced.label>
+  <!-- EN: Glittertech Non-Sterile Body Part -->
+  <BodyPartsNonSterile_Glittertech.label>Glittertech Non-Sterile Body Part</BodyPartsNonSterile_Glittertech.label>
+  <!-- EN: Primitive Non-Sterile Body Part -->
+  <BodyPartsNonSterile_Primitive.label>Primitive Non-Sterile Body Part</BodyPartsNonSterile_Primitive.label>
+  <!-- EN: Reclaimed Body Parts -->
+  <BodyPartsReclaimed.label>Reclaimed Body Parts</BodyPartsReclaimed.label>
+</LanguageData>

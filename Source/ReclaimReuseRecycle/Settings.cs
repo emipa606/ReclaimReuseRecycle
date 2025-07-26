@@ -4,8 +4,8 @@ namespace DoctorVanGogh.ReclaimReuseRecycle;
 
 internal class Settings : ModSettings
 {
-    private static readonly FloatRange Default_NonSterile = new FloatRange(0.85f, 1f);
-    private static readonly FloatRange Default_Mangled = new FloatRange(0.5f, .85f);
+    private static readonly FloatRange Default_NonSterile = new(0.85f, 1f);
+    private static readonly FloatRange Default_Mangled = new(0.5f, .85f);
 
     public static FloatRange NonSterileRange = Default_NonSterile;
     public static FloatRange MangledRange = Default_Mangled;

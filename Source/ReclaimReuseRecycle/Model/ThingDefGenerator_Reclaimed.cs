@@ -11,12 +11,12 @@ namespace DoctorVanGogh.ReclaimReuseRecycle;
 
 public static class ThingDefGenerator_Reclaimed
 {
-    public static readonly string NonSterileDefNameFormat = @"NonSterile_{0}";
+    private static readonly string NonSterileDefNameFormat = "NonSterile_{0}";
 
-    public static readonly string MangledDefNameFormat = @"Mangled_{0}";
+    private static readonly string MangledDefNameFormat = "Mangled_{0}";
 
-    public static readonly Color MangledColor = new Color(1f, 1f, 0.67f, 1f);
-    public static readonly Color NonSterileColor = new Color(0.67f, 1f, 0.67f, 1f);
+    private static readonly Color MangledColor = new(1f, 1f, 0.67f, 1f);
+    private static readonly Color NonSterileColor = new(0.67f, 1f, 0.67f, 1f);
 
     public static readonly string MangledColorHex = MangledColor.ToHexColor();
     public static readonly string NonSterileColorHex = NonSterileColor.ToHexColor();
@@ -26,7 +26,7 @@ public static class ThingDefGenerator_Reclaimed
 
     public static Dictionary<ThingDef, PackedThingDef[]> LookupCache;
 
-    public static ModContentPack contentPack;
+    private static ModContentPack contentPack;
 
 
     [DebuggerHidden]
@@ -41,10 +41,9 @@ public static class ThingDefGenerator_Reclaimed
             .Distinct();
         // prepare recipes/research to have researchproject's techlevel as fallback values
         var recipeThings = DefDatabase<RecipeDef>.AllDefs
-            .SelectMany(
-                rcd => rcd.products
-                    ?.Select(tcc => tcc.thingDef)
-                    .Select(td => new { ResearchTechLevel = rcd.researchPrerequisite?.techLevel, Def = td }))
+            .SelectMany(rcd => rcd.products
+                ?.Select(tcc => tcc.thingDef)
+                .Select(td => new { ResearchTechLevel = rcd.researchPrerequisite?.techLevel, Def = td }))
             .GroupBy(t => t.Def)
             .Select(g => new
             {
@@ -58,11 +57,7 @@ public static class ThingDefGenerator_Reclaimed
             join rt in recipeThings
                 on td equals rt.Def into comb
             from x in comb.DefaultIfEmpty()
-            select new
-            {
-                Def = td,
-                x?.MinResearchTechLevel
-            };
+            select x == null ? new { Def = td, MinResearchTechLevel = (TechLevel?)null } : x with { Def = td };
 
         contentPack = LoadedModManager.GetMod<R3Mod>().ContentPack;
 

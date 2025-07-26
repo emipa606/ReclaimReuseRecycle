@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: harvesting table -->
+  <R3_TableHarvesting.label>harvesting table</R3_TableHarvesting.label>
+  <!-- EN: A worktable to harvest parts & implants from deceased creatures & mechanoids. Benefits from being placed near a refurbishment table. -->
+  <R3_TableHarvesting.description>A worktable to harvest parts &amp; implants from deceased creatures &amp; mechanoids. Benefits from being placed near a refurbishment table.</R3_TableHarvesting.description>
+  <!-- EN: refurbishment table -->
+  <R3_TableRefurbishment.label>refurbishment table</R3_TableRefurbishment.label>
+  <!-- EN: A worktable to refurbish and clean reclaimed parts & implants. Benefits from being placed near a harvesting table. -->
+  <R3_TableRefurbishment.description>A worktable to refurbish and clean reclaimed parts &amp; implants. Benefits from being placed near a harvesting table.</R3_TableRefurbishment.description>
+</LanguageData>
