@@ -4,7 +4,7 @@
   <!-- EN: harvested -->
   <R3_AllowHarvested.label>récolté</R3_AllowHarvested.label>
   <!-- EN: Allow corpses with no remaining added parts or implants. -->
-  <R3_AllowHarvested.description>Autoriser les cadavres sans parties ajoutées ou implants restants.</R3_AllowHarvested.description>
+  <R3_AllowHarvested.description>Autoriser les cadavres sans aucune partie ajoutée ni implant.</R3_AllowHarvested.description>
   <!-- EN: unharvested (advanced) -->
   <R3_AllowUnharvested_Advanced.label>non récolté (avancé)</R3_AllowUnharvested_Advanced.label>
   <!-- EN: Allow corpses with remaining added parts or implants of advanced complexity that could be reclaimed. -->
@@ -12,7 +12,7 @@
   <!-- EN: unharvested (glittertech) -->
   <R3_AllowUnharvested_Glittertech.label>non récolté (glittertech)</R3_AllowUnharvested_Glittertech.label>
   <!-- EN: Allow corpses with remaining added parts or implants of Glittertech complexity that could be reclaimed. -->
-  <R3_AllowUnharvested_Glittertech.description>Autoriser les cadavres avec des parties ajoutées restantes ou des implants de complexité Glittertech qui pourraient être récupérés.</R3_AllowUnharvested_Glittertech.description>
+  <R3_AllowUnharvested_Glittertech.description>Autoriser les cadavres avec des parties ajoutées restantes ou des implants de complexité glittertech qui pourraient être récupérés.</R3_AllowUnharvested_Glittertech.description>
   <!-- EN: unharvested (primitive) -->
   <R3_AllowUnharvested_Primitive.label>non récolté (primitif)</R3_AllowUnharvested_Primitive.label>
   <!-- EN: Allow corpses with remaining added parts or implants of primitive complexity that could be reclaimed. -->
