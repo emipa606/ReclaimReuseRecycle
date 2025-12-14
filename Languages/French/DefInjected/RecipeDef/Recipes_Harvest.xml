@@ -30,6 +30,6 @@
   <!-- EN: harvest mechanoid (primitive) -->
   <R3_HarvestCorpseMechanoid_Primitive.label>récolte d'un méchanoïde (primitif)</R3_HarvestCorpseMechanoid_Primitive.label>
   <!-- EN: Harvest a mechanoid corpse for reclaimable parts of primitive complexity. -->
-  <R3_HarvestCorpseMechanoid_Primitive.description>Récupérezr les pièces récupérables d'une carcasse d'un mécanoïde de complexité primitive.</R3_HarvestCorpseMechanoid_Primitive.description>
+  <R3_HarvestCorpseMechanoid_Primitive.description>Récupérer les pièces récupérables d'une carcasse d'un mécanoïde de complexité primitive.</R3_HarvestCorpseMechanoid_Primitive.description>
   <R3_HarvestCorpseMechanoid_Primitive.jobString>Récolte d'un méchanoïde</R3_HarvestCorpseMechanoid_Primitive.jobString>
 </LanguageData>
