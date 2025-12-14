@@ -4,25 +4,25 @@
   <!-- EN: Advanced Harvesting -->
   <R3_AdvancedHarvesting.label>Récolte avancée</R3_AdvancedHarvesting.label>
   <!-- EN: Knowledge how to extract parts of advanced complexity from corpses. -->
-  <R3_AdvancedHarvesting.description>Savoir comment extraire des pièces d'une complexité avancée à partir de cadavres.</R3_AdvancedHarvesting.description>
+  <R3_AdvancedHarvesting.description>Connaissance des techniques d'extraction de pièces de complexité avancée des cadavres.</R3_AdvancedHarvesting.description>
   <!-- EN: Advanced Refurbishment -->
-  <R3_AdvancedRefurbishment.label>Remise à neuf avancée</R3_AdvancedRefurbishment.label>
+  <R3_AdvancedRefurbishment.label>Remise en état avancée</R3_AdvancedRefurbishment.label>
   <!-- EN: Knowledge how to sterilze & refurbish reclaimed parts of advanced complexity. -->
-  <R3_AdvancedRefurbishment.description>Savoir comment stériliser</R3_AdvancedRefurbishment.description>
+  <R3_AdvancedRefurbishment.description>Connaissances en matière de stérilisation et de remise en état de pièces récupérées de complexité avancée.</R3_AdvancedRefurbishment.description>
   <!-- EN: Basic Harvesting -->
-  <R3_BasicHarvesting.label>Récolte de base</R3_BasicHarvesting.label>
+  <R3_BasicHarvesting.label>Récolte simple</R3_BasicHarvesting.label>
   <!-- EN: Knowledge how to extract parts of basic complexity from corpses. -->
-  <R3_BasicHarvesting.description>Savoir comment extraire des cadavres des pièces d'une complexité élémentaire.</R3_BasicHarvesting.description>
+  <R3_BasicHarvesting.description>Connaissance des techniques d'extraction de pièces de complexité primitive des cadavres.</R3_BasicHarvesting.description>
   <!-- EN: Basic Refurbishment -->
-  <R3_BasicRefurbishment.label>Remise en état de base</R3_BasicRefurbishment.label>
+  <R3_BasicRefurbishment.label>Remise en état simple</R3_BasicRefurbishment.label>
   <!-- EN: Knowledge how to sterilze & refurbish reclaimed parts of basic complexity. -->
-  <R3_BasicRefurbishment.description>Savoir comment stériliser</R3_BasicRefurbishment.description>
+  <R3_BasicRefurbishment.description>Connaissances en matière de stérilisation et de remise en état de pièces récupérées de complexité primitive.</R3_BasicRefurbishment.description>
   <!-- EN: Glittertech Harvesting -->
-  <R3_GlittertechHarvesting.label>Récolte de paillettes</R3_GlittertechHarvesting.label>
+  <R3_GlittertechHarvesting.label>Récolte glittertech</R3_GlittertechHarvesting.label>
   <!-- EN: Knowledge how to extract parts of Glittertech complexity from corpses. -->
-  <R3_GlittertechHarvesting.description>Savoir comment extraire des cadavres des éléments de complexité Glittertech.</R3_GlittertechHarvesting.description>
+  <R3_GlittertechHarvesting.description>Connaissance des techniques d'extraction de pièces de complexité glittertech des cadavres.</R3_GlittertechHarvesting.description>
   <!-- EN: Glittertech Refurbishment -->
-  <R3_GlittertechRefurbishment.label>Remise à neuf de Glittertech</R3_GlittertechRefurbishment.label>
+  <R3_GlittertechRefurbishment.label>Remise en état Glittertech</R3_GlittertechRefurbishment.label>
   <!-- EN: Knowledge how to sterilze & refurbish reclaimed parts of Glittertech complexity. -->
-  <R3_GlittertechRefurbishment.description>Savoir comment stériliser</R3_GlittertechRefurbishment.description>
+  <R3_GlittertechRefurbishment.description>Connaissances en matière de stérilisation et de remise en état de pièces récupérées de complexité Gglittertech.</R3_GlittertechRefurbishment.description>
 </LanguageData>

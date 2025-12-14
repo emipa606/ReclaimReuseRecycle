@@ -4,17 +4,17 @@
   <!-- EN: Refurbish advanced body part. -->
   <R3_Refurbish_Advanced.label>Remise en état d'une partie du corps avancée.</R3_Refurbish_Advanced.label>
   <!-- EN: Refurbish and clean a mangled body part and prepare it for reuse. -->
-  <R3_Refurbish_Advanced.description>Remettez en état et nettoyez une partie du corps mutilé et préparez-la à être réutilisée.</R3_Refurbish_Advanced.description>
+  <R3_Refurbish_Advanced.description>Remettez en état et nettoyez une partie du corps endommagée et préparez-la à être réutilisée.</R3_Refurbish_Advanced.description>
   <!-- EN: Refurbishing mangled part -->
-  <R3_Refurbish_Advanced.jobString>Remise à neuf d'une pièce mutilée</R3_Refurbish_Advanced.jobString>
+  <R3_Refurbish_Advanced.jobString>Remise en état d'une pièce endommagée</R3_Refurbish_Advanced.jobString>
   <!-- EN: Refurbish glittertech body part. -->
-  <R3_Refurbish_Glittertech.label>Remise à neuf d'une partie du corps d'un glittertech.</R3_Refurbish_Glittertech.label>
-  <R3_Refurbish_Glittertech.description>Remettez en état et nettoyez une partie du corps mutilé et préparez-la à être réutilisée.</R3_Refurbish_Glittertech.description>
-  <R3_Refurbish_Glittertech.jobString>Remise à neuf d'une pièce mutilée</R3_Refurbish_Glittertech.jobString>
+  <R3_Refurbish_Glittertech.label>Remise en état d'une partie du corps glittertech.</R3_Refurbish_Glittertech.label>
+  <R3_Refurbish_Glittertech.description>Remettez en état et nettoyez une partie du corps endommagée et préparez-la à être réutilisée.</R3_Refurbish_Glittertech.description>
+  <R3_Refurbish_Glittertech.jobString>Remise en état d'une pièce endommagée</R3_Refurbish_Glittertech.jobString>
   <!-- EN: Refurbish primitive body part. -->
-  <R3_Refurbish_Primitive.label>Remise en état d'une partie du corps primitif.</R3_Refurbish_Primitive.label>
-  <R3_Refurbish_Primitive.description>Remettez en état et nettoyez une partie du corps mutilé et préparez-la à être réutilisée.</R3_Refurbish_Primitive.description>
-  <R3_Refurbish_Primitive.jobString>Remise à neuf d'une pièce mutilée</R3_Refurbish_Primitive.jobString>
+  <R3_Refurbish_Primitive.label>Remise en état d'une partie du corps primitive.</R3_Refurbish_Primitive.label>
+  <R3_Refurbish_Primitive.description>Remettez en état et nettoyez une partie du corps endommagée et préparez-la à être réutilisée.</R3_Refurbish_Primitive.description>
+  <R3_Refurbish_Primitive.jobString>Remise en état d'une pièce endommagée</R3_Refurbish_Primitive.jobString>
   <!-- EN: Sterilize advanced body part. -->
   <R3_Sterilize_Advanced.label>Stériliser une partie du corps avancée.</R3_Sterilize_Advanced.label>
   <!-- EN: Meticulously clean a reclaimed body part and prepare it for reuse. -->
@@ -22,11 +22,11 @@
   <!-- EN: Sterilizing reclaimed part -->
   <R3_Sterilize_Advanced.jobString>Stérilisation d'une pièce récupérée</R3_Sterilize_Advanced.jobString>
   <!-- EN: Sterilize glittertech body part. -->
-  <R3_Sterilize_Glittertech.label>Stériliser une partie du corps en paillettes.</R3_Sterilize_Glittertech.label>
+  <R3_Sterilize_Glittertech.label>Stériliser une partie du corps glittertech.</R3_Sterilize_Glittertech.label>
   <R3_Sterilize_Glittertech.description>Nettoyez méticuleusement une partie du corps récupérée et préparez-la à être réutilisée.</R3_Sterilize_Glittertech.description>
   <R3_Sterilize_Glittertech.jobString>Stérilisation d'une pièce récupérée</R3_Sterilize_Glittertech.jobString>
   <!-- EN: Sterilize primitive body part. -->
-  <R3_Sterilize_Primitive.label>Stériliser une partie du corps primitif.</R3_Sterilize_Primitive.label>
+  <R3_Sterilize_Primitive.label>Stériliser une partie du corps primitie.</R3_Sterilize_Primitive.label>
   <R3_Sterilize_Primitive.description>Nettoyez méticuleusement une partie du corps récupérée et préparez-la à être réutilisée.</R3_Sterilize_Primitive.description>
   <R3_Sterilize_Primitive.jobString>Stérilisation d'une pièce récupérée</R3_Sterilize_Primitive.jobString>
 </LanguageData>
