@@ -4,7 +4,7 @@
   <R3.SettingsCategory>Récupérer, réutiliser, recycler</R3.SettingsCategory>
   <R3.OriginalThing>Object d'origine</R3.OriginalThing>
   <R3.ModVersion>Version installée du module : {0}</R3.ModVersion>
-  <R3.NonSterile.Description>C'est un objet qui a été récupéré sur un cadavre. Il doit être stérilisé avant de pouvoir être réutilisé.</R3.NonSterile.Description>
+  <R3.NonSterile.Description>Il s'agit d'un {0} récupéré sur un cadavre. Il doit être stérilisé avant de pouvoir être réutilisé.</R3.NonSterile.Description>
   <R3.Mangled.Description>C'est un {0} qui a été récupéré d'un cadavre. Il est très endommagé et doit être remis en état et stérilisé avant de pouvoir être réutilisé.</R3.Mangled.Description>
   <R3.StatsReport_ReclamationMultiplier>Multiplicateur pour l'état de la réclamation</R3.StatsReport_ReclamationMultiplier>
   <R3.Complexity>Complexité</R3.Complexity>

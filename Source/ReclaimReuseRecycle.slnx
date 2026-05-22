@@ -6,4 +6,35 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="ReclaimReuseRecycle/ReclaimReuseRecycle.csproj" />
+  <Folder Name="/XML/1.6/Defs/StatDefs/">
+    <File Path="../1.6/Defs/StatDefs/StatCategories.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/ThingCategoryDefs/">
+    <File Path="../1.6/Defs/ThingCategoryDefs/ThingCategories.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/ResearchProjectDefs/">
+    <File Path="../1.6/Defs/ResearchProjectDefs/ResearchProjects.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/SpecialThingFilterDefs/">
+    <File Path="../1.6/Defs/SpecialThingFilterDefs/SpecialThingFilters.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/r3.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/RecipeDefs/">
+    <File Path="../1.6/Defs/RecipeDefs/Recipes_Harvest.xml" />
+    <File Path="../1.6/Defs/RecipeDefs/Recipes_Refurbish.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/WorkGiverDefs/">
+    <File Path="../1.6/Defs/WorkGiverDefs/WorkGivers.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/ThingDefs_Buildings/">
+    <File Path="../1.6/Defs/ThingDefs_Buildings/Buildings_Production.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Patches/WorkGiverPatches/">
+    <File Path="../1.6/Patches/WorkGiverPatches/Complex Jobs.xml" />
+  </Folder>
 </Solution>

@@ -1,72 +1,46 @@
-# GitHub Copilot Instructions for RimWorld Modding Project in C#
+# GitHub Copilot Instructions for "Reclaim, Reuse, Recycle (Continued)" RimWorld Mod
 
 ## Mod Overview and Purpose
 
-**Mod Name:** Reclaim Reuse Recycle
-
-The "Reclaim Reuse Recycle" mod for RimWorld introduces an immersive recycling system into the game. Its primary purpose is to enhance resource management by allowing players to reclaim materials from used items, harvested corpses, and various other sources. This mod aims to expand gameplay by adding depth to crafting and production processes, encouraging efficient use of resources and strategic planning.
+"Reclaim, Reuse, Recycle (Continued)" is a mod for RimWorld that allows players to harvest implants and bionics from corpses and prepare them for reuse or sale. This feature enriches the gameplay by introducing a more sophisticated recycling system and adds depth to the management of resources.
 
 ## Key Features and Systems
 
-1. **Recycling Workstations:**
-   - Players can build and upgrade special workstations (`Building_R3WorkTable`) to process recyclable materials.
-   
-2. **Harvest and Reclamation:**
-   - New recipes are integrated (`RecipeWorker_Harvest`) to facilitate harvesting and reclaim materials from corpses and other items.
-   
-3. **Advanced Filtering Systems:**
-   - Filter mechanisms (`Filter_Corpse`, `Filter_Harvested`, etc.) are implemented to manage and streamline recyclable items.
-
-4. **Complexity and Stat Calculations:**
-   - Introduces new complexity levels (`Complexity.cs`) and statistical evaluation (`StatPart_Reclaimed`) to determine reclaim potential.
-
-5. **Integration with Existing Defs:**
-   - The mod seamlessly integrates with existing game definitions, leveraging XML files for ease of patching and extension.
+- **Harvesting and Refurbishment**: Introduces a `Harvesting bench` and a `refurbishment bench`. Corpses can be harvested for artificial parts that can be refurbished and used by colonists.
+- **Complexity Tiers**: Classifies parts into three complexity tiers - primitive, advanced, and glittertech, corresponding to different tech levels. All mod-added parts are supported.
+- **Research Integration**: The ability to harvest and refurbish parts is gated by tiered research projects, adding a strategic layer to the gameplay.
+- **Damage-Based Reclamation**: Parts can be reclaimed as 'Non-Sterile', 'Mangled', or not at all, based on their condition. The reclamation thresholds can be customized in the mod settings.
+- **Risk of Failure**: Harvesting parts can fail similar to medical operations, depending on the skill level of the colonist performing the operation.
 
 ## Coding Patterns and Conventions
 
-- **Naming Conventions:**
-  - Classes follow PascalCase, and methods are structured using CamelCase.
-  - Internal classes, such as `Building_R3WorkTable`, are suffixed with the object type they extend or relate to.
-- **Use of Static Classes and Methods:**
-  - Utilitarian functions are placed in static classes like `HarvestUtility`.
-  
-- **Modular Structure:**
-  - Each feature and system is encapsulated (e.g., `InjuryDebug` for injury processing), enhancing code readability and maintainability.
+- **Naming Conventions**: Classes and methods use PascalCase, while parameters and variables use camelCase.
+- **Static Utilities**: Frequently used functionalities are encapsulated in static classes, such as `HarvestUtility` and `Util`.
+- **Inheritance and Interfaces**: Uses inheritance to create specialized filter classes such as `Filter_Corpse`, and implements interfaces like `IComparer` for custom sorting logic.
 
 ## XML Integration
 
-The mod relies on XML files to define new content and modify existing definitions. This includes:
-
-- **Defining New Recipes and Workbenches:**
-  - XML files are used for defining new crafting recipes associated with the `PackedThing` and `PackedThingDef`.
-  
-- **Stat Modifications and Filtering Rules:**
-  - Specific XML configurations manage stat alterations and filtering logic as stipulated in `ThingDefGenerator_Reclaimed`.
+- The mod relies on XML for defining many of its data structures, such as `ThingDefs`, which are essential for integration with RimWorld's modding framework. Make sure XML files correctly define necessary elements for parts and recipes.
 
 ## Harmony Patching
 
-- **Tool for Compatibility:**
-  - Harmony is used extensively to patch existing game methods without editing the base game code directly, ensuring broad compatibility with other mods.
-  
-- **Examples of Patched Classes:**
-  - `DefGenerator_GenerateImpliedDefs_PostResolve` and `DefGenerator_GenerateImpliedDefs_PreResolve` demonstrate pre- and post-resolution patching to extend game functionalities.
+- The mod uses Harmony for patching RimWorld's methods to extend or modify the base game behavior, particularly for tasks like harvesting operations and failure handling.
+- Ensure to correctly identify methods to patch and use appropriate Harmony annotations to avoid conflicts with other mods.
 
 ## Suggestions for Copilot
 
-1. **Code Suggestions for Naming:**
-   - Encourage Copilot to suggest method names that are descriptive and adhere to the naming conventions outlined (e.g., actions and results in method names).
-   
-2. **Harmony Patch Templates:**
-   - Generate templates for creating new Harmony patches quickly, including usage patterns for prefix and postfix injections.
+- **Auto-completion of Class Definitions**: When writing new classes, use Copilot to suggest base class methods and properties that need to be overridden or implemented.
+- **Pattern Recognition**: Allow Copilot to recognize coding patterns, especially for repetitive structures in filter and utility classes.
+- **XML Structure Handling**: Suggest common XML structure needs for defining new items or modifying existing game elements.
+- **Harmony Annotations**: Use Copilot to recall proper syntax and practices for Harmony patches.
+- **Complex Logic Assistance**: Seek suggestions for complex conditionals, especially pertaining to part reclamation logic and tier classification.
 
-3. **XML Snippet Generation:**
-   - Assist in generating XML snippets for new definitions, ensuring they align with the mod's existing framework.
+By following these detailed instructions, developers can effectively use GitHub Copilot to augment their modding workflow, creating a robust and integrated mod for RimWorld.
 
-4. **Refactoring and Optimization:**
-   - Suggest optimizations for existing methods to improve performance or reduce redundancy, especially in loops or complex operations.
-
-5. **Test Method Generation:**
-   - Auto-generate test methods following mod-specific scenarios to maintain stability and functionality.
-
-This guide provides a comprehensive framework to utilize GitHub Copilot effectively, ensuring consistent and high-quality contributions to the RimWorld modding project.
+## Project Solution Guidelines
+- Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
+- Use these in-solution XML files as the primary files for reference and modification.
+- The `.github/copilot-instructions.md` file is included in the solution under the `.github` solution folder, so it should be read/modified from within the solution instead of using paths outside the solution. Update this file once only, as it and the parent-path solution reference point to the same file in this workspace.
+- When making functional changes in this mod, ensure the documented features stay in sync with implementation; use the in-solution `.github` copy as the primary file.
+- In the solution is also a project called Assembly-CSharp, containing a read-only version of the decompiled game source, for reference and debugging purposes.
+- For any new documentation, update this copilot-instructions.md file rather than creating separate documentation files.

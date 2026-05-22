@@ -74,4 +74,4 @@ Get it from [github](https://github.com/DoctorVanGogh/ReclaimReuseRecycle/releas
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/ReclaimReuseRecycle?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2567364887) | tags:  reuse,  bionics
+[![Image](https://img.shields.io/github/v/release/emipa606/ReclaimReuseRecycle?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2567364887) | tags: bionics, reuse

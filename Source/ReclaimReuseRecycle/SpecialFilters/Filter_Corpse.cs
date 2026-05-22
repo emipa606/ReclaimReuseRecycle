@@ -31,13 +31,13 @@ public abstract class Filter_Corpse(Complexity? complexity) : SpecialThingFilter
         var race = corpse.InnerPawn.RaceProps;
         var healthTracker = corpse.InnerPawn.health;
         var diffSet = healthTracker.hediffSet;
-
+        var isSupportedRace = race.IsMechanoid || race.Humanlike || race.Animal;
 
         if (complexity == null)
         {
-            return race.IsMechanoid && !GetReclaimablePartsMechanoid(diffSet).Any()
-                   || (race.Humanlike || race.Animal) &&
-                   !GetReclaimablePartsOrganic(diffSet).Any();
+            return !isSupportedRace || race.IsMechanoid && !GetReclaimablePartsMechanoid(diffSet).Any()
+                                    || (race.Humanlike || race.Animal) &&
+                                    !GetReclaimablePartsOrganic(diffSet).Any();
         }
 
         return race.IsMechanoid && GetReclaimablePartsMechanoid(diffSet)
