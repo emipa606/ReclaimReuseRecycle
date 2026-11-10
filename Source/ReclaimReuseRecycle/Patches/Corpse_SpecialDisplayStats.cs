@@ -7,7 +7,7 @@ using Verse;
 namespace DoctorVanGogh.ReclaimReuseRecycle;
 
 [HarmonyPatch(typeof(Corpse), nameof(Corpse.SpecialDisplayStats))]
-internal class Corpse_SpecialDisplayStats
+internal static class Corpse_SpecialDisplayStats
 {
     public static void Postfix(Corpse __instance, ref IEnumerable<StatDrawEntry> __result)
     {

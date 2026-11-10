@@ -1,41 +1,109 @@
-# GitHub Copilot Instructions for "Reclaim, Reuse, Recycle (Continued)" RimWorld Mod
+# GitHub Copilot Instructions for Reclaim, Reuse, Recycle (Continued) Mod
 
 ## Mod Overview and Purpose
 
-"Reclaim, Reuse, Recycle (Continued)" is a mod for RimWorld that allows players to harvest implants and bionics from corpses and prepare them for reuse or sale. This feature enriches the gameplay by introducing a more sophisticated recycling system and adds depth to the management of resources.
+**Reclaim, Reuse, Recycle (Continued)** is an update to DoctorVanGogh's original Reclaim, Reuse, Recycle mod. It introduces a new "Harvesting bench" with a job for harvesting corpses for artificial parts. These parts can then be refurbished at a "refurbishment bench," allowing colonists to reuse or sell them. The mod integrates with the game's research system, separating parts into three complexity tiers: primitive, advanced, and glittertech. It also introduces filters to the stockpile and recipe ingredients for corpses, and modifies the vanilla "butcher corpse" recipe to exclude corpses with parts.
 
 ## Key Features and Systems
 
-- **Harvesting and Refurbishment**: Introduces a `Harvesting bench` and a `refurbishment bench`. Corpses can be harvested for artificial parts that can be refurbished and used by colonists.
-- **Complexity Tiers**: Classifies parts into three complexity tiers - primitive, advanced, and glittertech, corresponding to different tech levels. All mod-added parts are supported.
-- **Research Integration**: The ability to harvest and refurbish parts is gated by tiered research projects, adding a strategic layer to the gameplay.
-- **Damage-Based Reclamation**: Parts can be reclaimed as 'Non-Sterile', 'Mangled', or not at all, based on their condition. The reclamation thresholds can be customized in the mod settings.
-- **Risk of Failure**: Harvesting parts can fail similar to medical operations, depending on the skill level of the colonist performing the operation.
+- **Harvesting Bench**: A new building where colonists can harvest artificial parts from corpses.
+- **Refurbishment Bench**: A building where harvested parts can be refurbished for reuse.
+- **Research Integration**: Part harvesting and refurbishment are gated by tiered research projects.
+- **Part Complexity**: Parts are categorized into three complexity tiers: primitive, advanced, and glittertech.
+- **Sterility and Mangled Parts**: Harvested parts can be reclaimed as 'Non-Sterile' or 'Mangled' depending on their damage state.
+- **Special Filters**: Filters added to the stockpile and recipe ingredients for corpses.
+- **Modified Vanilla Recipe**: The vanilla "butcher corpse" recipe is modified to exclude corpses with parts.
 
 ## Coding Patterns and Conventions
 
-- **Naming Conventions**: Classes and methods use PascalCase, while parameters and variables use camelCase.
-- **Static Utilities**: Frequently used functionalities are encapsulated in static classes, such as `HarvestUtility` and `Util`.
-- **Inheritance and Interfaces**: Uses inheritance to create specialized filter classes such as `Filter_Corpse`, and implements interfaces like `IComparer` for custom sorting logic.
+- **Modding Framework**: The mod is built using the RimWorld modding framework, which follows standard C# practices.
+- **Harmony Patching**: The mod uses Harmony patching to modify vanilla game behavior. Ensure that you understand Harmony's mechanics and conventions.
+- **XML Definitions**: XML files are used to define new recipes, research projects, special thing filters, and stat categories.
+- **Model Classes**: Model classes are used to represent complex data structures, such as part complexity and reclamation types.
+- **Building Classes**: Building classes extend the base building class to include custom functionality, such as special display stats.
 
 ## XML Integration
 
-- The mod relies on XML for defining many of its data structures, such as `ThingDefs`, which are essential for integration with RimWorld's modding framework. Make sure XML files correctly define necessary elements for parts and recipes.
+XML files are used to define new game elements such as recipes, research projects, special thing filters, and stat categories. Key XML files in the mod include:
+
+- **RecipeDefs**: Defines the recipes for harvesting and refurbishing parts.
+- **ResearchProjectDefs**: Defines the research projects required to unlock part harvesting and refurbishment.
+- **SpecialThingFilterDefs**: Defines filters for the stockpile and recipe ingredients.
+- **StatDefs**: Defines new stat categories and related stats.
+
+### Example XML Definition
+
+xml
+<RecipeDef>
+  <label>Harvest Non-Sterile Part</label>
+  <description>Harvest a non-sterile part from a corpse.</description>
+  <workAmount>100</workAmount>
+  <researchPrerequisite>ResearchHarvesting</researchPrerequisite>
+  <products>
+    <li>
+      <thingDef>NonSterilePart</thingDef>
+      <count>1</count>
+    </li>
+  </products>
+  <ingredients>
+    <li>
+      <thingDef>Corpse</thingDef>
+      <count>1</count>
+    </li>
+    <li>
+      <thingDef>Medicine</thingDef>
+      <count>1</count>
+    </li>
+  </ingredients>
+</RecipeDef>
+
 
 ## Harmony Patching
 
-- The mod uses Harmony for patching RimWorld's methods to extend or modify the base game behavior, particularly for tasks like harvesting operations and failure handling.
-- Ensure to correctly identify methods to patch and use appropriate Harmony annotations to avoid conflicts with other mods.
+Harmony patching is used to modify vanilla game behavior. Ensure that you understand Harmony's mechanics and conventions. Key harmony patches in the mod include:
+
+- **Corpse_SpecialDisplayStats**: Patches the `SpecialDisplayStats` method of the `Corpse` class to include additional display stats for harvested parts.
+- **Building_R3WorkTable**: Patches the `SpecialDisplayStats` method of the `Building_R3WorkTable` class to include additional display stats for the harvesting and refurbishment benches.
+
+### Example Harmony Patch
+
+csharp
+using HarmonyLib;
+using RimWorld;
+using System.Collections.Generic;
+using System.Reflection;
+using Verse;
+
+namespace ReclaimReuseRecycle.Patches
+{
+    [HarmonyPatch(typeof(Corpse), "SpecialDisplayStats", MethodType.Getter)]
+    public static class Corpse_SpecialDisplayStats
+    {
+        public static void Postfix(Corpse __instance, ref IEnumerable<StatDrawEntry> __result)
+        {
+            var parts = __instance.InnerPawn.health.hediffSet.GetHediffs<Hediff_AddedPart>();
+            if (parts.Count > 0)
+            {
+                foreach (var part in parts)
+                {
+                    var stat = new StatDrawEntry(StatCategoryDefOf.Basics, part.LabelCap, part.Severity.ToString("0.00"), null, 500, false);
+                    __result = __result.Append(stat);
+                }
+            }
+        }
+    }
+}
+
 
 ## Suggestions for Copilot
 
-- **Auto-completion of Class Definitions**: When writing new classes, use Copilot to suggest base class methods and properties that need to be overridden or implemented.
-- **Pattern Recognition**: Allow Copilot to recognize coding patterns, especially for repetitive structures in filter and utility classes.
-- **XML Structure Handling**: Suggest common XML structure needs for defining new items or modifying existing game elements.
-- **Harmony Annotations**: Use Copilot to recall proper syntax and practices for Harmony patches.
-- **Complex Logic Assistance**: Seek suggestions for complex conditionals, especially pertaining to part reclamation logic and tier classification.
+- **Familiarize Yourself with Harmony**: Ensure that you understand Harmony's mechanics and conventions to effectively use Copilot for patching vanilla game behavior.
+- **Understand XML Definitions**: XML files are used to define new game elements. Ensure that you understand the structure and purpose of each XML file.
+- **Review Existing Code**: Review existing C# and XML code to understand the mod's coding patterns and conventions.
+- **Use Semantic Summary**: Use the semantic summary to quickly identify key classes, methods, and files in the mod.
+- **Provide Detailed Instructions**: Provide detailed instructions to Copilot, including the context and purpose of the code you are working on.
 
-By following these detailed instructions, developers can effectively use GitHub Copilot to augment their modding workflow, creating a robust and integrated mod for RimWorld.
+By following these guidelines and suggestions, you can effectively use GitHub Copilot to assist with developing the Reclaim, Reuse, Recycle (Continued) mod.
 
 ## Project Solution Guidelines
 - Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
@@ -44,3 +112,11 @@ By following these detailed instructions, developers can effectively use GitHub 
 - When making functional changes in this mod, ensure the documented features stay in sync with implementation; use the in-solution `.github` copy as the primary file.
 - In the solution is also a project called Assembly-CSharp, containing a read-only version of the decompiled game source, for reference and debugging purposes.
 - For any new documentation, update this copilot-instructions.md file rather than creating separate documentation files.
+
+
+## Hard rules (must follow)
+- Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
+- Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
+

@@ -14,7 +14,6 @@ public static class HarvestUtility
         string label, BodyPartRecord part, ThingDef spawn)
     {
         var num = 1f;
-        //StatDef operationStat = !race.IsMechanoid ? StatDefOf.MedicalSurgerySuccessChance : StatDefOf.MechanoidOperationSuccessChance;
         var operationStat = StatDefOf.MedicalSurgerySuccessChance;
 
         // basic worker stat

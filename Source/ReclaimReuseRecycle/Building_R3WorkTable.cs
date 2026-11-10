@@ -14,7 +14,5 @@ internal class Building_R3WorkTable : Building_WorkTable
 
 
         yield return new StatDrawEntry(StatCategoryDefOf.Building, StatDefOf.MedicalSurgerySuccessChance);
-        // TODO: mechanoids
-        //yield return new StatDrawEntry(StatCategoryDefOf.Building, StatDefOf.MedicalSurgerySuccessChance);
     }
 }

@@ -116,7 +116,7 @@ public static class ThingDefGenerator_Reclaimed
             comps = [new CompProperties_Forbiddable()],
             thingCategories = [],
             pathCost = 10,
-            techHediffsTags = t.techHediffsTags != null ? [..t.techHediffsTags] : null,
+            techHediffsTags = t.techHediffsTags != null ? [.. t.techHediffsTags] : null,
             statBases = [],
             //SpawnOnUnpack = t,
             ReclamationType = type,
@@ -280,8 +280,6 @@ public static class ThingDefGenerator_Reclaimed
 
         return LookupCache.TryGetValue(def, out var elements)
             ? elements.FirstOrDefault(p => p.ReclamationType == t.Value)
-            :
-            //Log.Message($"[ReclaimReuseRecycle]: Failed to find {def} in LookupCache");
-            null;
+            : null;
     }
 }

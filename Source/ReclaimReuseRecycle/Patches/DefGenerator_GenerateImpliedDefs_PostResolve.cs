@@ -6,7 +6,7 @@ using Verse;
 namespace DoctorVanGogh.ReclaimReuseRecycle;
 
 [HarmonyPatch(typeof(DefGenerator), nameof(DefGenerator.GenerateImpliedDefs_PostResolve))]
-internal class DefGenerator_GenerateImpliedDefs_PostResolve
+internal static class DefGenerator_GenerateImpliedDefs_PostResolve
 {
     [HarmonyPostfix]
     public static void Postfix()

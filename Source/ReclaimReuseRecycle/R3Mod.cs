@@ -20,11 +20,10 @@ public class R3Mod : Mod
     public static R3Mod instance;
     public readonly bool EbfLoaded;
     public readonly MethodInfo GetMaxHealthInfo;
-    private Texture2D _logo;
-
-    private DateTime lastChange = DateTime.Now;
 
     private string TagLine;
+
+    private DateTime lastChange = DateTime.Now;
 
     public R3Mod(ModContentPack content) : base(content)
     {
@@ -54,7 +53,7 @@ public class R3Mod : Mod
     private static string[] TagLines => _tagLines ?? (_tagLines = LanguageKeys.r3.R3_Tagline.Translate().RawText
         .Split(["\r\n", "\r", "\n"], StringSplitOptions.RemoveEmptyEntries));
 
-    private Texture2D Logo => _logo ?? (_logo = ContentFinder<Texture2D>.Get("UI/Recycle"));
+    private Texture2D Logo => field ?? (field = ContentFinder<Texture2D>.Get("UI/Recycle"));
 
     public override string SettingsCategory()
     {

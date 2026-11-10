@@ -4,7 +4,7 @@ using RimWorld;
 namespace DoctorVanGogh.ReclaimReuseRecycle;
 
 [HarmonyPatch(typeof(DefGenerator), nameof(DefGenerator.GenerateImpliedDefs_PreResolve))]
-internal class DefGenerator_GenerateImpliedDefs_PreResolve
+internal static class DefGenerator_GenerateImpliedDefs_PreResolve
 {
     public static void Prefix()
     {

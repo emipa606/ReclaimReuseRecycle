@@ -6,9 +6,9 @@ using Verse;
 namespace DoctorVanGogh.ReclaimReuseRecycle.Patches;
 
 [HarmonyPatch(typeof(ThingWithComps), nameof(Thing.GetGizmos))]
-internal class InjuryDebug
+internal static class InjuryDebug
 {
-    private static void Postfix(ThingWithComps __instance, ref IEnumerable<Gizmo> __result)
+    public static void Postfix(ThingWithComps __instance, ref IEnumerable<Gizmo> __result)
     {
         if (__instance is not Corpse c || !DebugSettings.godMode)
         {

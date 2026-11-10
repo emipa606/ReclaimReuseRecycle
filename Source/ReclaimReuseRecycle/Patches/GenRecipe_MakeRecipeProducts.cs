@@ -6,7 +6,7 @@ using Verse;
 namespace DoctorVanGogh.ReclaimReuseRecycle;
 
 [HarmonyPatch(typeof(GenRecipe), nameof(GenRecipe.MakeRecipeProducts))]
-public class GenRecipe_MakeRecipeProducts
+public static class GenRecipe_MakeRecipeProducts
 {
     private static readonly Thing[] Empty = [];
 

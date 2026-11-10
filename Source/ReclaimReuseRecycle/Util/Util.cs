@@ -57,7 +57,7 @@ public static class Util
         if (R3Mod.instance.EbfLoaded)
         {
             maxHealthPart =
-                (float)R3Mod.instance.GetMaxHealthInfo.Invoke(null, [part.def, hediffSet.pawn, part]);
+                (float)(R3Mod.instance.GetMaxHealthInfo.Invoke(null, [part.def, hediffSet.pawn, part]) ?? 1f);
         }
         else
         {
